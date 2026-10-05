@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Data Feminism: When Will AI Be Profitable?</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Reveal.js Base Styles (Local with CDN Fallback) -->
+  <link rel="stylesheet" href="mp9_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="mp9_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" onerror="this.onerror=null;">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" onerror="this.onerror=null;">
+
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1e293b;
+      --bg-glass: rgba(17, 24, 39, 0.75);
+      --border-subtle: #334155;
+      --border-accent: #0284c7;
+      --cyan-bright: #00f0ff;
+      --cyan-glow: rgba(0, 240, 255, 0.15);
+      --sky: #38bdf8;
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.15);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.15);
+      --rose: #f43f5e;
+      --rose-glow: rgba(244, 63, 94, 0.15);
+      --purple: #a855f7;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+    }
+
+    /* Reveal Container Resets */
+    .reveal-viewport {
+      background: radial-gradient(circle at 50% 10%, #172554 0%, var(--bg-dark) 55%, #030712 100%) !important;
+      color: var(--text-main);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .reveal {
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--text-main);
+    }
+
+    /* Fixed Top Navigation Bar */
+    #top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 48px;
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 100;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+    #top-nav .nav-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--sky);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      font-weight: 600;
+    }
+    #top-nav .nav-title {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    #top-nav .nav-meta {
+      color: var(--text-subtle);
+    }
+
+    /* Slides & Scrollable Architecture */
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slide {
+      padding: 60px 40px 40px 40px !important;
+      box-sizing: border-box;
+      height: 100% !important;
+    }
+
+    .reveal .slide.scrollable {
+      overflow-y: auto !important;
+      max-height: 88vh !important;
+      padding-right: 25px !important;
+    }
+
+    /* Custom Modern Scrollbar */
+    .reveal .slide.scrollable::-webkit-scrollbar {
+      width: 8px;
+    }
+    .reveal .slide.scrollable::-webkit-scrollbar-track {
+      background: rgba(17, 24, 39, 0.6);
+      border-radius: 4px;
+    }
+    .reveal .slide.scrollable::-webkit-scrollbar-thumb {
+      background: #0284c7;
+      border-radius: 4px;
+    }
+    .reveal .slide.scrollable::-webkit-scrollbar-thumb:hover {
+      background: var(--cyan-bright);
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif;
+      text-transform: none;
+      letter-spacing: -0.02em;
+      margin-top: 0;
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 3.0rem;
+      font-weight: 800;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 30%, var(--sky) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--sky);
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+      color: #cbd5e1;
+    }
+
+    /* Cards & Glassmorphic Layouts */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.25rem;
+      margin: 1rem 0;
+    }
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      position: relative;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--sky);
+      transform: translateY(-2px);
+    }
+    .card.highlight-cyan {
+      border-left: 4px solid var(--cyan-bright);
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, var(--bg-surface) 100%);
+    }
+    .card.highlight-amber {
+      border-left: 4px solid var(--amber);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, var(--bg-surface) 100%);
+    }
+    .card.highlight-rose {
+      border-left: 4px solid var(--rose);
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.05) 0%, var(--bg-surface) 100%);
+    }
+    .card.highlight-emerald {
+      border-left: 4px solid var(--emerald);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, var(--bg-surface) 100%);
+    }
+
+    .card-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-title.cyan { color: var(--cyan-bright); }
+    .card-title.amber { color: var(--amber); }
+    .card-title.rose { color: var(--rose); }
+    .card-title.emerald { color: var(--emerald); }
+
+    /* Quotes */
+    .quote-box {
+      background: rgba(30, 41, 59, 0.6);
+      border-left: 4px solid var(--purple);
+      padding: 0.85rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+      color: #e2e8f0;
+      font-size: 1.15rem;
+    }
+    .quote-box .citation {
+      display: block;
+      font-style: normal;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-principle {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+    .badge-empirical {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .badge-human {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    /* Metric Callouts */
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .metric-pill {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      text-align: center;
+    }
+    .metric-pill .metric-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .metric-pill .metric-lbl {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Tables */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+      background: var(--bg-surface);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+    table.data-table th {
+      background: var(--bg-surface-elevated);
+      color: var(--sky);
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    table.data-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+      color: #cbd5e1;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    table.data-table tr:hover td {
+      background: rgba(30, 41, 59, 0.4);
+    }
+
+    /* Image Gallery */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .image-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .image-card .caption {
+      padding: 0.85rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .image-card .caption strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+    }
+
+    /* Iframe Live Embed Card */
+    .embed-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 1rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+    .embed-header {
+      background: #0f172a;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .embed-header .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--emerald);
+      font-weight: 600;
+    }
+    .embed-header .actions a {
+      color: var(--sky);
+      text-decoration: none;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      font-size: 0.75rem;
+      transition: all 0.2s ease;
+    }
+    .embed-header .actions a:hover {
+      background: var(--sky);
+      color: #000;
+    }
+    .embed-frame {
+      width: 100%;
+      height: 480px;
+      border: none;
+      background: #000000;
+      display: block;
+    }
+
+    /* Key Finding Highlight */
+    .finding-box {
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+    .finding-box.danger {
+      background: rgba(244, 63, 94, 0.08);
+      border: 1px solid rgba(244, 63, 94, 0.25);
+    }
+    .finding-box.warning {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+    .finding-box.success {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    /* Unordered lists */
+    ul.tech-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.5rem 0;
+    }
+    ul.tech-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.55;
+      font-size: 0.95rem;
+    }
+    ul.tech-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--sky);
+      font-weight: bold;
+    }
+
+    /* Authors Banner */
+    .authors-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem 1.5rem;
+      background: rgba(17, 24, 39, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .authors-bar .author-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .authors-bar .author-name {
+      font-weight: 700;
+      color: #ffffff;
+      font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    .authors-bar .author-role {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Persistent Status Bar -->
+  <div id="top-nav">
+    <div class="nav-badge" id="slide-badge">CS 5083: DATA FEMINISM</div>
+    <div class="nav-title" id="slide-title">When Will AI Be Profitable?</div>
+    <div class="nav-meta">Taylor Wise • Brian Boedecker • Arika Khor</div>
+  </div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 0: TITLE & ASSIGNMENT METADATA -->
+      <section class="slide scrollable" data-title="Overview & Architecture">
+        <div style="margin-top: 1rem;">
+          <span class="badge badge-principle">CS 4083 / CS 5083 Ethical and Responsible AI</span>
+          <span class="badge badge-empirical">Week 5 Asynchronous Assignment</span>
+          <h1 style="margin-top: 0.8rem;">Data Feminism Principles:<br>When Will AI Be Profitable?</h1>
+          <p style="font-size: 1.25rem; color: var(--sky); font-weight: 500; max-width: 1200px;">
+            Auditing Hyperscaler CapEx, Power Dynamics, and the Hidden Labor Behind "When Will AI Be Profitable and How Will It Be Achieved?"
+          </p>
+
+          <div class="authors-bar">
+            <div class="author-item">
+              <span class="author-name">Taylor Wise</span>
+              <span class="author-role">Group 25 • Dataset Research</span>
+            </div>
+            <div class="author-item">
+              <span class="author-name">Brian Boedecker</span>
+              <span class="author-role">Group 25 • Financial & Case Analysis</span>
+            </div>
+            <div class="author-item">
+              <span class="author-name">Arika Khor</span>
+              <span class="author-role">Group 25 • Infrastructure Auditing & Synthesis</span>
+            </div>
+            <div class="author-item" style="margin-left: auto;">
+              <span class="author-name">Dataset Trackers</span>
+              <span class="author-role">Epoch AI &amp; isaiprofitable.com</span>
+            </div>
+          </div>
+
+          <div class="card-grid" style="margin-top: 1.5rem;">
+            <div class="card highlight-cyan">
+              <div class="card-title cyan">Dataset Focus &amp; Core Question</div>
+              <p>
+                This analysis audits the empirical claims underlying the research dataset: <strong>"When will AI be profitable and how will it be achieved?"</strong> (compiled by Epoch AI and tracked live at <a href="https://isaiprofitable.com" target="_blank" style="color: var(--sky);">isaiprofitable.com</a>).
+              </p>
+            </div>
+            <div class="card highlight-amber">
+              <div class="card-title amber">Framework Execution Protocol</div>
+              <p>
+                <strong>Slides 1–7</strong> examine the dataset through Catherine D'Ignazio and Lauren Klein's 7 Data Feminism principles, executed entirely without generative AI. <strong>Slide 8</strong> reports an adversarial audit using a custom multi-agent AI verification framework.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 1: DATASET ARCHITECTURE & VISUAL ANCHORS + LIVE EMBED -->
+      <section class="slide scrollable" data-title="Dataset Architecture & Live Tracker">
+        <h2>Dataset Architecture &amp; The CapEx Chasm</h2>
+        <p>
+          Epoch AI and <a href="https://isaiprofitable.com" target="_blank" style="color: var(--sky);">isaiprofitable.com</a> compile financial disclosures, SEC filings, compute budgets, and revenue run-rates across hyperscalers and frontier AI labs. The data exposes an acute structural disconnect between capital expenditure and cash generation.
+        </p>
+
+        <!-- Visual Anchors: AI.png, krab.jpeg, FAANG.jpg -->
+        <div class="image-grid">
+          <div class="image-card">
+            <img src="AI.png" alt="AI CapEx vs Revenue Gap">
+            <div class="caption">
+              <strong>Figure 1: The CapEx Chasm</strong>
+              Hyperscaler infrastructure spend ($150B–$210B+) severely outpaces actual software subscription revenue ($25B–$30B), creating severe negative margins.
+            </div>
+          </div>
+          <div class="image-card">
+            <img src="krab.jpeg" alt="VC Capital Inflow Meme">
+            <div class="caption">
+              <strong>Figure 2: Speculative VC Capital Rush</strong>
+              Venture capital and Wall Street debt vehicles pump billions into AI startups to manufacture valuation multiples, regardless of operational cash burn.
+            </div>
+          </div>
+          <div class="image-card">
+            <img src="FAANG.jpg" alt="FAANG Circular Capital Flow">
+            <div class="caption">
+              <strong>Figure 3: Circular Capital Architecture</strong>
+              The insular loop: Big Tech finances AI startups, startups contract hyperscaler cloud compute, hyperscalers buy Nvidia chips, and Nvidia reinvests in startups.
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Interactive Embed of isaiprofitable.com -->
+        <div class="embed-card">
+          <div class="embed-header">
+            <div class="status">
+              <span style="font-size: 1.1rem; line-height: 1;">●</span> LIVE EMBED: isaiprofitable.com Tracker
+            </div>
+            <div class="actions">
+              <a href="https://isaiprofitable.com" target="_blank" rel="noopener noreferrer">↗ Open Full Screen</a>
+            </div>
+          </div>
+          <iframe class="embed-frame" src="https://isaiprofitable.com" title="Is AI Profitable Yet Live Tracker" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: PRINCIPLE 1 - EXAMINE POWER -->
+      <section class="slide scrollable" data-title="Principle #1: Examine Power">
+        <span class="badge badge-principle">Principle #1</span>
+        <h2>Examine Power</h2>
+
+        <div class="quote-box">
+          "Data feminism begins by analyzing how power operates in the world."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Examining power means mapping who controls data collection, who decides which metrics get prioritized, and whose financial incentives dictate what technical problems receive capital.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              While this dataset is published by Epoch AI and gathered through corporate filings, the power over what data exists resides with institutional venture capital and Wall Street shareholders. Most tech firms do not build AI because it solves a proven customer need; they are compelled to pivot toward AI to sustain stock valuations and satisfy Wall Street expectations.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <ul class="tech-list">
+            <li>
+              <strong>Allbirds (Footwear to Compute Pivot)</strong>: Allbirds, a company founded on sustainable wool and sugarcane sneakers, abruptly pivoted to leasing data center compute capacity. Following this announcement, their stock surged by up to <strong>875% intraday</strong>. This demonstrates that market capital rewards speculative compute announcements over core operational solvency.
+            </li>
+            <li>
+              <strong>Hardware Allocation Gatekeeping</strong>: Power concentrates in hardware suppliers and hyperscalers. Tier-1 cloud providers lock in multi-year allocations of Nvidia H100 and B200 clusters, forcing early-stage research groups and smaller firms into exploitative cloud pricing or equity concessions just to access compute.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: PRINCIPLE 2 - CHALLENGE POWER -->
+      <section class="slide scrollable" data-title="Principle #2: Challenge Power">
+        <span class="badge badge-principle">Principle #2</span>
+        <h2>Challenge Power</h2>
+
+        <div class="quote-box">
+          "Data feminism commits to challenging unequal power structures and working toward justice."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Challenging power means identifying structural asymmetries in the data supply chain, dismantling predatory corporate restructurings, and creating mechanisms for equitable, democratic governance over technological resources.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              If institutional investors maintain unchecked control over AI infrastructure, technical safety, public utilities, and consumer protection are sacrificed for valuation multiples. With the top 10% of Americans owning roughly 93% of the U.S. stock market, algorithmic priorities and infrastructure footprints are dictated by a tiny wealth bracket. Challenging power requires auditing self-serving corporate restructurings, resisting circular capital tricks, and enacting municipal and state resource guardrails.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <ul class="tech-list">
+            <li>
+              <strong>OpenAI Non-Profit to For-Profit Structural Capture</strong>: OpenAI was founded as a 501(c)(3) public research non-profit dedicated to safe AI. Leadership subsequently dismantled this structure to convert into a for-profit entity, spending over <strong>$16.3B</strong> while stripping the original non-profit board's oversight authority to unlock billions in uncapped venture equity.
+            </li>
+            <li>
+              <strong>xAI &amp; SpaceX Balance-Sheet Obfuscation</strong>: Elon Musk shifted capital, compute, and engineering staff between SpaceX and xAI. By bundling space launch contracts and private equity vehicles to boost xAI's valuation past <strong>$50B</strong>, the venture masked operational cash burn from independent audit while soliciting outside capital.
+            </li>
+            <li>
+              <strong>Grassroots Resistance &amp; Municipal Moratoriums</strong>: In Canadian County and Luther, Oklahoma, local residents organized against hyperscale data center incursions. Citizens packed city halls, forced the resignation of complicit municipal officials, defeated non-disclosure agreements (NDAs), and passed emergency data center moratoria to protect local water wells.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: PRINCIPLE 3 - ELEVATE EMOTION AND EMBODIMENT -->
+      <section class="slide scrollable" data-title="Principle #3: Elevate Emotion & Embodiment">
+        <span class="badge badge-principle">Principle #3</span>
+        <h2>Elevate Emotion and Embodiment</h2>
+
+        <div class="quote-box">
+          "Data feminism teaches us to value multiple forms of knowledge, including the knowledge that comes from people as living, feeling bodies in the world."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Elevating emotion and embodiment means rejecting the reduction of human lived experience to sanitized corporate spreadsheets, centering the visceral human, bodily, and psychological toll inflicted by capital-driven restructuring.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              Profitability trackers like Epoch AI and isaiprofitable.com focus on upward-trending annualized revenue, GPU counts, and theoretical ROI curves. These sanitized metrics deliberately erase the physical and mental devastation of mass workforce layoffs engineered to fund GPU purchases. Corporate earnings calls celebrate "lean operations" while ignoring the panic, disruption, and livelihood loss experienced by thousands of dismissed employees.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <div class="metric-row">
+            <div class="metric-pill">
+              <span class="metric-val" style="color: var(--emerald);">$133 Billion</span>
+              <span class="metric-lbl">Microsoft Fiscal Net Income</span>
+            </div>
+            <div class="metric-pill">
+              <span class="metric-val" style="color: var(--rose);">5,500+ Jobs</span>
+              <span class="metric-lbl">Microsoft Workforce Discarded</span>
+            </div>
+            <div class="metric-pill">
+              <span class="metric-val" style="color: var(--amber);">$101B → $133B</span>
+              <span class="metric-lbl">Year-over-Year Capital Surge</span>
+            </div>
+          </div>
+          <ul class="tech-list" style="margin-top: 1rem;">
+            <li>
+              <strong>Microsoft Net Income vs. Tech Layoffs</strong>: Microsoft reported a net income of $133B for the fiscal year (up from $101B in the previous period), attributing financial gains to AI cloud integration. Simultaneously, Microsoft executed over 5,500 targeted layoffs across product and engineering divisions, cannibalizing human careers to bankroll billions in hardware CapEx.
+            </li>
+            <li>
+              <strong>The Embodied Toll of Algorithmic Layoffs</strong>: Engineers and technical staff face escalating burnout, constant on-call strain, and sudden terminations delivered through cold, automated HR emails. The bodily reality of insomnia, medical insecurity, and psychological trauma never appears in financial models predicting "when AI will become profitable."
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: PRINCIPLE 4 - RETHINK BINARIES AND HIERARCHIES -->
+      <section class="slide scrollable" data-title="Principle #4: Rethink Binaries & Hierarchies">
+        <span class="badge badge-principle">Principle #4</span>
+        <h2>Rethink Binaries and Hierarchies</h2>
+
+        <div class="quote-box">
+          "Data feminism requires us to challenge the gender binary, along with other systems of counting and classification that perpetuate oppression."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Rethinking binaries and hierarchies requires dismantling simplistic either/or categories—such as "profitable vs. unprofitable" or "genuine customer demand vs. speculative cash injection"—to expose self-dealing, circular financial feedback loops.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              isaiprofitable.com demonstrates that the generative AI ecosystem is not a binary division between sustainable profitable businesses and failing startups. Instead, the market is sustained by an insular, circular capital hierarchy where venture firms, hyperscalers, and chipmakers recycle the same capital pools to simulate organic demand and inflate valuations without generating authentic consumer utility.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <ul class="tech-list">
+            <li>
+              <strong>The Nvidia-CoreWeave Circular Debt Loop</strong>: Nvidia made massive equity investments in GPU cloud provider CoreWeave while backing billions of dollars in CoreWeave's debt. CoreWeave immediately turned around and used those debt-backed funds to purchase tens of thousands of Nvidia H100 GPUs. Nvidia then booked these transactions as historic, record-breaking hardware revenue, pumping its market cap beyond <strong>$3 trillion</strong> on self-funded hardware sales.
+            </li>
+            <li>
+              <strong>Meta Reality Labs Metaverse Capital Sinkhole</strong>: Simplified binary reporting hides colossal capital misallocations behind overall corporate profits. Meta's Reality Labs division accumulated over <strong>$88B in cumulative losses</strong> against barely <strong>$11.8B in realized revenues</strong> (backed by $5.97B in venture and capital injections), masked only by Meta's digital advertising monopoly.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: PRINCIPLE 5 - EMBRACE PLURALISM -->
+      <section class="slide scrollable" data-title="Principle #5: Embrace Pluralism">
+        <span class="badge badge-principle">Principle #5</span>
+        <h2>Embrace Pluralism</h2>
+
+        <div class="quote-box">
+          "Data feminism insists that the most complete knowledge comes from synthesizing multiple perspectives, with priority given to local, Indigenous, and experiential ways of knowing."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Embracing pluralism means acknowledging that genuine knowledge cannot come solely from Silicon Valley boardrooms and Wall Street ticker feeds. It requires elevating local community voices, frontline utility operators, and indigenous stewards whose land, water, and air sustain physical infrastructure.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              Both isaiprofitable.com and Epoch AI evaluate AI profitability exclusively through corporate balance sheets, GPU wattages, and software revenues. They omit the externalized physical and communal costs of running hyperscale facilities: depleted municipal aquifers, strained electrical grids, continuous low-frequency noise pollution, and residential rate hikes. By prioritizing corporate accounting over local community survival, the datasets construct a monocultural illusion of progress.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <ul class="tech-list">
+            <li>
+              <strong>Canadian County &amp; Yukon, Oklahoma Water Crisis</strong>: Beltline Energy proposed a 1 GW data center across 480 acres in Yukon, Oklahoma—an agricultural region enduring severe drought. The project sought up to <strong>2.5 MGD (million gallons per day)</strong> of municipal treated wastewater, consuming 100% of Yukon's treatment capacity and leaving zero margin for local farm irrigation or residential growth. Local residents dependent on 15 leased wells in the Garber-Wellington Aquifer faced direct threats of aquifer drawdown with zero developer accountability.
+            </li>
+            <li>
+              <strong>Memphis xAI Gas Turbine Pollution</strong>: In Memphis, Tennessee, xAI skirted local air quality permits to install unregistered methane gas combustion turbines to power its "Colossus" supercluster. These turbines spew nitrogen oxides and particulate matter into surrounding working-class, majority-Black neighborhoods, dismissing experiential community health concerns in the rush to train models.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: PRINCIPLE 6 - CONSIDER CONTEXT -->
+      <section class="slide scrollable" data-title="Principle #6: Consider Context">
+        <span class="badge badge-principle">Principle #6</span>
+        <h2>Consider Context</h2>
+
+        <div class="quote-box">
+          "Data feminism asserts that data are not neutral or objective. They are the products of unequal social relations, and this context is essential for conducting accurate, ethical analysis."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Considering context means auditing the political economy, accounting tricks, and operational conditions behind any numerical metric before accepting it as an objective indicator of success.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              The metric of "Annualized Revenue" (ARR) is heavily publicized across the dataset to suggest exponential business health. However, ARR is merely a single month or quarter's revenue multiplied by 12, ignoring churn, seasonality, and massive structural expenses. Without context regarding hardware depreciation, thermal cooling costs, electrical utility contracts, and recurring software licensing fees, headline revenue figures conceal massive net losses.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <div class="metric-row">
+            <div class="metric-pill">
+              <span class="metric-val" style="color: var(--sky);">$5.5 Billion</span>
+              <span class="metric-lbl">OpenAI Estimated ARR (Dec 2024)</span>
+            </div>
+            <div class="metric-pill">
+              <span class="metric-val" style="color: var(--rose);">$5.8 Billion</span>
+              <span class="metric-lbl">OpenAI Operational Compute Spend (2024)</span>
+            </div>
+            <div class="metric-pill">
+              <span class="metric-val" style="color: var(--amber);">36–48 Mos</span>
+              <span class="metric-lbl">H100 GPU Depreciation Horizon</span>
+            </div>
+          </div>
+          <ul class="tech-list" style="margin-top: 1rem;">
+            <li>
+              <strong>OpenAI 2024 Revenue vs. Compute Chasm</strong>: On December 31, 2024, OpenAI publicized an estimated annualized revenue run-rate of $5.5B. Contextually, its operational compute spend alone in 2024 reached approximately <strong>$5.8B</strong>—generating an immediate negative operating margin before accounting for thousands of employees, facility leases, data licensing deals, or legal reserves.
+            </li>
+            <li>
+              <strong>Hardware Obsolescence &amp; Depreciation Cliffs</strong>: Enterprise H100 GPU clusters experience severe thermal degradation and software obsolescence within 36 to 48 months. Financial models treating current revenue as net profit ignore that the billions spent on compute hardware will need to be spent again before current infrastructure breaks even.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: PRINCIPLE 7 - MAKE LABOR VISIBLE -->
+      <section class="slide scrollable" data-title="Principle #7: Make Labor Visible">
+        <span class="badge badge-principle">Principle #7</span>
+        <h2>Make Labor Visible</h2>
+
+        <div class="quote-box">
+          "The work of data science, like all work in the world, is the work of many hands. Data feminism makes this labor visible so that it can be recognized and valued."
+          <span class="citation">— Catherine D'Ignazio &amp; Lauren F. Klein, Data Feminism (MIT Press)</span>
+        </div>
+
+        <div class="card-grid">
+          <div class="card highlight-cyan">
+            <div class="card-title cyan">In Our Own Words</div>
+            <p>
+              Making labor visible means explicitly identifying, enumerating, and valuing the hidden, human labor force that builds, curates, aligns, and physically maintains computational systems.
+            </p>
+          </div>
+          <div class="card highlight-amber">
+            <div class="card-title amber">Application to Our Dataset</div>
+            <p>
+              Epoch AI’s "Staff Count" figures track exclusively full-time, salaried corporate personnel while deliberately omitting contract and contingent labor. Corporate narratives celebrate "autonomous artificial intelligence," concealing the millions of human annotators, content moderators, and hardware facility technicians who label datasets, filter toxic violence, and physically maintain server halls.
+            </p>
+          </div>
+        </div>
+
+        <div class="card highlight-rose" style="margin-top: 1rem;">
+          <div class="card-title rose">Concrete Realities &amp; Empirical Details</div>
+          <ul class="tech-list">
+            <li>
+              <strong>Google Full AI Division Undercount</strong>: Epoch AI reported a "Staff Count" of 6,000 for Google's AI division on August 6, 2025. This metric completely excludes the global shadow workforce of over <strong>50,000 precarious contractors</strong> (employed via intermediary vendors like Appen, Scale AI, and Cognizant) who perform RLHF reinforcement learning, prompt grading, and data cleaning for $2 to $4 an hour without benefits or job security.
+            </li>
+            <li>
+              <strong>Physical Data Center Facility Workers</strong>: Hyperscale infrastructure relies on low-wage physical laborers working in 85+ dB acoustic environments: technicians swapping failed liquid-cooling lines, electricians maintaining backup generator arrays, and facility janitors—workers completely erased from "AI talent" indices.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: SLIDE 8 - GENERATIVE AI COMPARISON & ADVERSARIAL AUDIT -->
+      <section class="slide scrollable" data-title="Slide 8: Gen AI Comparison & Audit">
+        <span class="badge badge-empirical">Slide 8 of Rubric</span>
+        <h2>Generative AI Comparison &amp; Adversarial Audit</h2>
+
+        <div class="finding-box warning" style="margin-bottom: 1.25rem;">
+          <strong>System Configuration &amp; Adversarial Architecture:</strong>
+          Slides 1–7 were completed entirely by the student authors without generative AI. Upon completion, we ran an adversarial audit using a multi-agent framework: <strong>Gemini 3.8 Flash (High Reasoning mode)</strong> as primary model orchestrator, paired with <strong>Hermes &amp; Jev deterministic verification engines</strong> to score sycophancy, and a <strong>GSD internet-scraping swarm</strong> cross-referencing SEC filings, city council records, and engineering memos via SQLite state tracking.
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Audit Dimension</th>
+              <th style="width: 39%;">Human Empirical Analysis (Slides 1–7)</th>
+              <th style="width: 39%;">Standard Generative AI Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mechanisms vs. Platitudes</strong></td>
+              <td>Grounded in hard financial mechanisms: Allbirds 875% pivot surge, CoreWeave/Nvidia GPU debt loops, Garver Engineering municipal effluent memos.</td>
+              <td>Defaulted to generic ethics platitudes: <em>"AI power dynamics are multifaceted"</em>, <em>"companies should prioritize stakeholder alignment"</em>. No balance sheet literacy.</td>
+            </tr>
+            <tr>
+              <td><strong>Accounting Literacy</strong></td>
+              <td>Exposed the ARR trick: subtracted $5.8B compute burn from $5.5B ARR to show negative gross margins; modeled 36-month GPU depreciation cliffs.</td>
+              <td>Conflated Annualized Run-Rate with net operational profit; uncritically celebrated Microsoft's $133B net income without recognizing 5,500 simultaneous layoffs.</td>
+            </tr>
+            <tr>
+              <td><strong>Material Ecology</strong></td>
+              <td>Anchored pluralism in physical ecology: 2.5 MGD municipal water capture in Yukon, aquifer cones of depression, unregistered gas turbines in Memphis.</td>
+              <td>Confined "pluralism" and "context" narrowly to token and demographic diversity in language training sets, ignoring physical environmental extraction.</td>
+            </tr>
+            <tr>
+              <td><strong>Supply-Chain Visibility</strong></td>
+              <td>Centered 50,000+ outsourced RLHF annotators and on-site facility technicians enduring 85 dB noise and hazardous liquid coolants.</td>
+              <td>Suffered from supply-chain amnesia: praised high-profile research scientists and prompt engineers, erasing the underpaid global workforce that fine-tuned the model.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="finding-box success">
+          <strong>Key Audit Takeaway:</strong> Generative AI models inherently reproduce corporate press releases and abstract ethical discourse, systematically erasing physical hardware constraints, circular capital flows, and the manual human labor on which their own intelligence is constructed.
+        </div>
+      </section>
+
+      <!-- SLIDE 10: SYNTHESIS MATRIX & REFERENCES -->
+      <section class="slide scrollable" data-title="Synthesis & Grounding Matrix">
+        <h2>Data Feminism Audit Matrix</h2>
+        <p>
+          A consolidated cross-reference of how each Data Feminism principle deconstructs the "AI Profitability" narrative:
+        </p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Principle</th>
+              <th>Corporate Metric / Narrative</th>
+              <th>Physical / Economic Reality</th>
+              <th>Audited Mechanism</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Examine Power</strong></td>
+              <td>Stock rally on AI announcements</td>
+              <td>Allbirds +875% intraday surge</td>
+              <td>Speculative compute pivot rewards hype over footwear solvency</td>
+            </tr>
+            <tr>
+              <td><strong>2. Challenge Power</strong></td>
+              <td>$16.3B spent on "benevolent AGI"</td>
+              <td>Non-profit board dismantled</td>
+              <td>Corporate capture converts public benefit into uncapped VC equity</td>
+            </tr>
+            <tr>
+              <td><strong>3. Elevate Emotion</strong></td>
+              <td>Record $133B net income</td>
+              <td>5,500+ tech workers laid off</td>
+              <td>Sanitizing human livelihood disruption to finance Nvidia GPU procurement</td>
+            </tr>
+            <tr>
+              <td><strong>4. Rethink Binaries</strong></td>
+              <td>Record hardware revenue growth</td>
+              <td>Nvidia-CoreWeave debt circularity</td>
+              <td>Debt-backed round-trip capital loop inflates $3T market valuation</td>
+            </tr>
+            <tr>
+              <td><strong>5. Embrace Pluralism</strong></td>
+              <td>Clean regional compute campus</td>
+              <td>2.5 MGD Yukon water capture</td>
+              <td>100% of municipal effluent diverted, bypassing local agricultural needs</td>
+            </tr>
+            <tr>
+              <td><strong>6. Consider Context</strong></td>
+              <td>$5.5B annualized run-rate (ARR)</td>
+              <td>$5.8B operational compute spend</td>
+              <td>Run-rate omits recurring 36-month GPU obsolescence &amp; facility leases</td>
+            </tr>
+            <tr>
+              <td><strong>7. Make Labor Visible</strong></td>
+              <td>"Staff Count: 6,000" (Google AI)</td>
+              <td>50,000+ outsourced contractors</td>
+              <td>Shadow workforce performing RLHF at $2–$4/hr without equity or benefits</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="authors-bar" style="margin-top: 1rem;">
+          <div class="author-item">
+            <span class="author-name">References &amp; Evidence Sources</span>
+            <span class="author-role">
+              Epoch AI Research (2024–2026) • isaiprofitable.com • City of Yukon / Garver Engineering WWTP Effluent Audit • SEC Form 10-K Filings (MSFT, NVDA) • UC Law Environmental Journal
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js Scripts (Local with CDN Fallback) -->
+  <script src="mp9_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js" onerror="this.onerror=null;"></script>
+
+  <!-- Plugins -->
+  <script src="mp9_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="mp9_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="mp9_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+
+  <script>
+    // Initialize Reveal.js
+    Reveal.initialize({
+      width: 1600,
+      height: 900,
+      margin: 0.05,
+      minScale: 0.2,
+      maxScale: 1.0,
+      controls: true,
+      progress: true,
+      slideNumber: 'c/t',
+      hash: true,
+      history: true,
+      center: false,
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      mouseWheel: false,
+      plugins: [ RevealNotes, RevealSearch, RevealZoom ]
+    });
+
+    // Update Top Navigation Bar on slide change
+    function updateTopNav(event) {
+      const currentSlide = event.currentSlide;
+      const title = currentSlide.getAttribute('data-title') || 'Data Feminism Principles';
+      const badge = currentSlide.querySelector('.badge-principle, .badge-empirical');
+      
+      const titleEl = document.getElementById('slide-title');
+      const badgeEl = document.getElementById('slide-badge');
+
+      if (titleEl) {
+        titleEl.textContent = title;
+      }
+      if (badgeEl && badge) {
+        badgeEl.textContent = badge.textContent.trim();
+      } else if (badgeEl) {
+        badgeEl.textContent = 'CS 5083: DATA FEMINISM';
+      }
+    }
+
+    Reveal.on('ready', updateTopNav);
+    Reveal.on('slidechanged', updateTopNav);
+  </script>
+</body>
+</html>

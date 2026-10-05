@@ -5,6 +5,9 @@ format:
   revealjs:
     theme: black
     slide-number: true
+    width: 1400
+    height: 850
+    margin: 0.08
     center: false
     parallax-background-image: "city-parallax.png"
     parallax-background-size: "2304px 1296px"

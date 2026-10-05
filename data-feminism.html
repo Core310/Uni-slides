@@ -15,7 +15,7 @@
   <style>
     :root {
       --accent-color: #38bdf8;
-      --card-bg: rgba(11, 16, 26, 0.84);
+      --card-bg: rgba(11, 16, 26, 0.86);
       --card-border: rgba(56, 189, 248, 0.28);
     }
 
@@ -24,14 +24,24 @@
       background: transparent !important;
     }
 
-    /* Clean, focused slide card that ensures text is the main thing sticking out */
+    .reveal .slides {
+      pointer-events: auto;
+    }
+
+    /* Clean, focused slide card with guaranteed bottom clearance for scrolling */
     .reveal .slides section {
       text-align: left;
       top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
       overflow-y: auto !important;
-      max-height: 85vh !important;
+      -webkit-overflow-scrolling: touch;
       box-sizing: border-box !important;
-      padding: 45px 55px 140px 55px !important;
+      padding: 35px 50px 180px 50px !important;
       background: var(--card-bg);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -40,8 +50,17 @@
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
     }
 
+    /* Force uncollapsible bottom space so the last lines are NEVER cut off */
+    .reveal .slides section::after {
+      content: "";
+      display: block;
+      height: 160px;
+      width: 100%;
+      clear: both;
+    }
+
     .reveal .slides section > *:last-child {
-      margin-bottom: 80px !important;
+      margin-bottom: 100px !important;
     }
 
     /* Headings */
@@ -53,23 +72,23 @@
     }
 
     .reveal h1 {
-      font-size: 2.1em;
+      font-size: 1.95em;
       margin-bottom: 0.5em;
       border-bottom: 2px solid var(--accent-color);
       padding-bottom: 0.25em;
     }
 
     .reveal h3 {
-      font-size: 1.25em;
+      font-size: 1.2em;
       color: var(--accent-color);
       margin-bottom: 0.5em;
     }
 
     .reveal p, .reveal li {
-      font-size: 0.95em;
-      line-height: 1.65;
+      font-size: 0.9em;
+      line-height: 1.6;
       color: #f1f5f9;
-      margin-bottom: 0.85em;
+      margin-bottom: 0.8em;
     }
 
     .reveal strong {
@@ -90,16 +109,16 @@
       margin-bottom: 0.35em;
     }
 
-    /* Subtle custom scrollbar */
+    /* Custom scrollbar */
     .reveal .slides section::-webkit-scrollbar {
-      width: 7px;
+      width: 8px;
     }
     .reveal .slides section::-webkit-scrollbar-track {
       background: rgba(0, 0, 0, 0.3);
       border-radius: 4px;
     }
     .reveal .slides section::-webkit-scrollbar-thumb {
-      background: rgba(56, 189, 248, 0.5);
+      background: rgba(56, 189, 248, 0.6);
       border-radius: 4px;
     }
     .reveal .slides section::-webkit-scrollbar-thumb:hover {
@@ -251,13 +270,16 @@ Our main model runner used Gemini 3.8 flash with high reasoning. Additionally, w
 
   <script>
     Reveal.initialize({
+      // Dimensions with generous display margins
+      width: 1400,
+      height: 850,
+      margin: 0.08,
+      minScale: 0.2,
+      maxScale: 1.0,
+
       // Parallax background image (City pixel art, dimmed 20%)
       parallaxBackgroundImage: 'city-parallax.png',
-
-      // Parallax background size (pixels)
       parallaxBackgroundSize: '2304px 1296px',
-
-      // Movement per slide
       parallaxBackgroundHorizontal: 200,
       parallaxBackgroundVertical: 50,
 

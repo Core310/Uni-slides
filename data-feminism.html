@@ -2,395 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Data Feminism: When Will AI Be Profitable?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Feminism Principles</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Reveal.js Stylesheets (Local with CDN Fallback) -->
   <link rel="stylesheet" href="mp9_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="mp9_files/libs/revealjs/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" onerror="this.onerror=null;">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" onerror="this.onerror=null;">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
 
   <style>
-    :root {
-      --bg-card: rgba(11, 15, 25, 0.82);
-      --border-card: rgba(56, 189, 248, 0.25);
-      --sky: #38bdf8;
-      --cyan: #00f0ff;
-      --emerald: #10b981;
-      --amber: #f59e0b;
-      --rose: #f43f5e;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-    }
-
-    /* Transparent reveal viewport to allow parallax background to shine through */
-    .reveal-viewport {
-      background: transparent !important;
-      color: var(--text-main);
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-
-    .reveal {
-      font-size: 26px;
-      font-weight: 400;
-      color: var(--text-main);
-    }
-
-    /* Fixed Top Navigation Bar */
-    #top-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 48px;
-      background: rgba(9, 13, 22, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(51, 65, 85, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 100;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
-    }
-    #top-nav .nav-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: 9999px;
-      background: rgba(56, 189, 248, 0.15);
-      color: var(--sky);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      font-weight: 600;
-    }
-    #top-nav .nav-title {
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-    #top-nav .nav-meta {
-      color: #64748b;
-    }
-
-    /* Slide Card Styling with Glassmorphism */
-    .reveal .slides {
-      text-align: left;
-    }
-
     .reveal .slides section {
-      padding: 50px 45px !important;
-      box-sizing: border-box;
-      background: var(--bg-card);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid var(--border-card);
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-    }
-
-    /* Scrollable Slide Handling */
-    .reveal .slide.scrollable {
+      text-align: left;
       overflow-y: auto !important;
-      max-height: 84vh !important;
-      padding-right: 30px !important;
-    }
-
-    /* Custom Scrollbar */
-    .reveal .slide.scrollable::-webkit-scrollbar {
-      width: 8px;
-    }
-    .reveal .slide.scrollable::-webkit-scrollbar-track {
-      background: rgba(17, 24, 39, 0.6);
-      border-radius: 4px;
-    }
-    .reveal .slide.scrollable::-webkit-scrollbar-thumb {
-      background: #0284c7;
-      border-radius: 4px;
-    }
-    .reveal .slide.scrollable::-webkit-scrollbar-thumb:hover {
-      background: var(--cyan);
-    }
-
-    /* Typography */
-    h1, h2, h3, h4 {
-      font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif;
-      color: #ffffff;
-      text-transform: none;
-      letter-spacing: -0.02em;
-    }
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 0.8rem;
-      background: linear-gradient(135deg, #ffffff 30%, var(--sky) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #f1f5f9;
-      margin-bottom: 0.6rem;
-      border-bottom: 2px solid rgba(56, 189, 248, 0.3);
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--sky);
-      margin-top: 1rem;
-      margin-bottom: 0.4rem;
-    }
-    p, li {
-      line-height: 1.65;
-      color: #cbd5e1;
-    }
-    strong {
-      color: #ffffff;
-    }
-    ul, ol {
-      margin-top: 0.5rem;
-      margin-bottom: 0.8rem;
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.4rem;
-    }
-
-    /* Embedded iframe container */
-    .embed-box {
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      border-radius: 12px;
-      overflow: hidden;
-      margin: 1rem 0;
-      background: #000000;
-    }
-    .embed-box iframe {
-      width: 100%;
-      height: 440px;
-      border: none;
-      display: block;
-    }
-
-    /* Image grid */
-    .img-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin: 1.25rem 0;
-    }
-    .img-card {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(51, 65, 85, 0.8);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .img-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      border-bottom: 1px solid rgba(51, 65, 85, 0.8);
-    }
-    .img-card .caption {
-      padding: 0.75rem 1rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Buttons & Links */
-    a.btn-embed {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 6px;
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      color: var(--sky);
-      text-decoration: none;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    a.btn-embed:hover {
-      background: var(--sky);
-      color: #0b0f19;
+      max-height: 85vh !important;
     }
   </style>
 </head>
 <body>
-
-  <!-- Top Persistent Header -->
-  <div id="top-nav">
-    <div class="nav-badge" id="slide-badge">CS 5083: DATA FEMINISM</div>
-    <div class="nav-title" id="slide-title">When Will AI Be Profitable?</div>
-    <div class="nav-meta">Taylor Wise • Brian Boedecker • Arika Khor (Group 25)</div>
-  </div>
-
   <div class="reveal">
     <div class="slides">
 
-      <!-- SLIDE 0: TITLE & METADATA -->
-      <section data-markdown class="scrollable">
+      <!-- Title Slide -->
+      <section data-markdown>
         <textarea data-template>
 # Data Feminism Principles
 
 ### When will AI be profitable and how will it be achieved?
-
-**Group Members:** Taylor Wise, Brian Boedecker, Arika Khor (Group 25)  
-**Course:** CS 4083 / CS 5083 Ethical and Responsible AI  
-**Assignment:** Data Analysis (Week 5 Asynchronous Assignment)  
-**Dataset:** Epoch AI & [isaiprofitable.com](https://isaiprofitable.com) (*"When will AI be profitable and how will it be achieved?"*)
-
----
-
-*Each slide below covers one of the seven Data Feminism principles applied to our dataset, followed by an eighth slide comparing human analysis against our multi-agent generative AI red-team auditor.*
         </textarea>
       </section>
 
-      <!-- SLIDE 1: DATASET OVERVIEW & VISUAL ANCHORS + LIVE EMBED -->
-      <section data-markdown class="scrollable">
-        <textarea data-template>
-# Visual Anchors & Live Tracker
-
-<div style="margin-bottom: 12px;">
-  <a href="https://isaiprofitable.com" target="_blank" class="btn-embed">↗ Open isaiprofitable.com in New Tab</a>
-</div>
-
-<div class="embed-box">
-  <iframe src="https://isaiprofitable.com" title="Is AI Profitable Yet Live Tracker" loading="lazy"></iframe>
-</div>
-
-<div class="img-grid">
-  <div class="img-card">
-    <img src="AI.png" alt="AI CapEx vs Revenue Gap">
-    <div class="caption"><strong>Figure 1: AI CapEx vs Revenue Gap</strong><br>Massive hardware buildout outstrips real software returns.</div>
-  </div>
-  <div class="img-card">
-    <img src="krab.jpeg" alt="VC Capital Rush">
-    <div class="caption"><strong>Figure 2: VC Capital Injection</strong><br>Venture capital pumping billions chasing speculative multiples.</div>
-  </div>
-  <div class="img-card">
-    <img src="FAANG.jpg" alt="FAANG Circular Capital Loop">
-    <div class="caption"><strong>Figure 3: Circular Capital Loop</strong><br>Big Tech investing in startups that recycle funds back into hardware.</div>
-  </div>
-</div>
-        </textarea>
-      </section>
-
-      <!-- SLIDE 2: PRINCIPLE 1 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 1 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #1: Examining Power
 
 Examining power (In terms of datasets) interprets as who controls the data in how it is collected, utilized, and acted upon.
 
-**How it applies:** While this dataset is published by Epoch AI and gathered through other sources showcasing AI profitability currently, you could argue that the power of the data and who controls it are the investors of the companies. Some companies may not want to create anything with AI, but are largely forced to for shareholder value.
+How it applies: While this dataset is published by Epoch AI and gathered through other sources showcasing AI profitability currently, you could argue that the power of the data and who controls it are the investors of the companies. Some companies may not want to create anything with AI, but are largely forced to for shareholder value.
 
-**Example:** Allbirds (A sustainable material shoe company) becoming a data center focused rental company. After announcing this, their stock climbed as high as 875%.
+Example: Allbirds (A sustainable material shoe company) becoming a data center focused rental company. After announcing this, their stock climbed as high as 875%.
         </textarea>
       </section>
 
-      <!-- SLIDE 3: PRINCIPLE 2 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 2 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #2: Challenging Power
 
 Challenging power (In terms of datasets) interprets as taking the next step and how we could remedy and allow fair control of the power over the dataset. 
 
-**How it applies:** This applies to our dataset because if we allow investors to control companies, then regulations, innovation and technology security suffer as it is now with our current implementation of AI. Noting that the top 10% of Americans control 93% of the stock market.
+How it applies: This applies to our dataset because if we allow investors to control companies, then regulations, innovation and technology security suffer as it is now with our current implementation of AI. Noting that the top 10% of Americans control 93% of the stock market.
 
-**Example:** As of this moment there are not great examples of challenging power, but there are good examples of people not using it. For example, OpenAI becoming a non-profit company and spending $16.3B while having a for profit parent company. Another example is when Elon Musk combined that of XAi and SpaceX to make it look like the company is more profitable than it is for investors to donate more.
+Example: As of this moment there are not great examples of challenging power, but there are good examples of people not using it. For example, OpenAI becoming a non-profit company and spending $16.3B while having a for profit parent company. Another example is when Elon Musk combined that of XAi and SpaceX to make it look like the company is more profitable than it is for investors to donate more.
         </textarea>
       </section>
 
-      <!-- SLIDE 4: PRINCIPLE 3 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 3 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #3: Elevate Emotion and Embodiment
 
 Elevating emotion and embodiment for our dataset interprets as trying not to persuade the reader through graphs and other means by only showing a portion of the story, even if the data is correct. 
 
-**How it applies:** For our dataset, this applies because there are plenty of graphs showcasing that AI is becoming more profitable than it was last year, and the year before that and..etc. However, What the graphs are missing are how many people have been laid off to save on these costs and how much has been invested in totality to un-equivalently skew the numbers. 
+How it applies: For our dataset, this applies because there are plenty of graphs showcasing that AI is becoming more profitable than it was last year, and the year before that and..etc. However, What the graphs are missing are how many people have been laid off to save on these costs and how much has been invested in totality to un-equivalently skew the numbers. 
 
-**Example:** Microsoft reported a net income of $133B this fiscal year compared to 2025’s $101B and largely credited AI. While these numbers may be true, and showcase a graph to investors that number do go up, it skips the fact that nearly 5,500 jobs were lost.
+Example: Microsoft reported a net income of $133B this fiscal year compared to 2025’s $101B and largely credited AI. While these numbers may be true, and showcase a graph to investors that number do go up, it skips the fact that nearly 5,500 jobs were lost.
         </textarea>
       </section>
 
-      <!-- SLIDE 5: PRINCIPLE 4 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 4 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #4: Rethink Binaries and Hierarchies
 
 isaiprofitable.com shows us more or less how much of a bubble a lot of funding is being applied to. When we take a look at the list, there's a fair amount of startup or recently AI promoted companies having money injected into them by venture capitalists. It's fairly obvious that money is being injected into all of these companies, but is either floating around between them, or spent on data center costs. 
 
-**Case 1: Facebook's Reality Labs project: The Metaverse with:**
+Case 1: Facebook's Reality Labs project: The Metaverse with:
 - loss of $88 billion 
 - gain of $11.8 billion (rough estimate). 
 - VC funding of $5.97 billion
 
-**Case 2: Nvidia investing into CoreWeave:**
+Case 2: Nvidia investing into CoreWeave. 
 - CoreWeave took said investments (and billions debt backed by Nvidia) to Nvidia to buy a few thousand H100s. 
 - Nvidia books this as record hardware revenue inflating their stock more
         </textarea>
       </section>
 
-      <!-- SLIDE 6: PRINCIPLE 5 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 5 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #5 — Embrace Pluralism
 
 As we saw in the most recent assignment of data centre companies lobbying to get their allotted power and water over the local municipal, 
 
-**Datasets:**
+Datasets:
 - isaiprofitable.com and epoch.ai both don't mention the human cost of the profit being gained. 
-- While local community impact is fairly hard to quantify, there's a fair amount in the news about this.  
-
-**Case details:**
-- Beltline Energy attempting to take up to 2.5 MGD (100%) of Yukon, OK's municipal wastewater buffer for a 1 GW campus, putting local agricultural wells at risk.
-- xAI installing unregistered methane gas turbines in Memphis, TN to bypass environmental permits, pushing industrial pollution into local residential neighborhoods.
+- While local community impact is fairly hard to quantify, there's a fair amount in the news about this.
         </textarea>
       </section>
 
-      <!-- SLIDE 7: PRINCIPLE 6 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 6 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #6: Consider Context
 
 Consider context means to consider the background behind why a number is there and what might have affected it before deciding what it must mean.
 
-**How it applies:** This applies to our dataset because “Annualized Revenue” does not provide a full look into whether AI is profitable. Considering the context behind how much money has been invested, staff count, etc. is crucial.
+How it applies: This applies to our dataset because “Annualized Revenue” does not provide a full look into whether AI is profitable. Considering the context behind how much money has been invested, staff count, etc. is crucial.
 
-**Example:** OpenAI estimated $5.5 billion Annualized Revenue on Dec. 31, 2024, and it’s total compute spend in 2024 was around $5.8 billion. Annualized revenue is just the expected revenue over the next 12 months, not how much it made that year, so that compute spend can’t just be subtracted from the annualized revenue. Additionally, compute spend doesn’t include all additional costs to subtract from revenue, such as facilities, salaries, etc.
+Example: OpenAI estimated $5.5 billion Annualized Revenue on Dec. 31, 2024, and it’s total compute spend in 2024 was around $5.8 billion. Annualized revenue is just the expected revenue over the next 12 months, not how much it made that year, so that compute spend can’t just be subtracted from the annualized revenue. Additionally, compute spend doesn’t include all additional costs to subtract from revenue, such as facilities, salaries, etc.
         </textarea>
       </section>
 
-      <!-- SLIDE 8: PRINCIPLE 7 -->
-      <section data-markdown class="scrollable">
+      <!-- Principle 7 -->
+      <section data-markdown>
         <textarea data-template>
 # Principle #7: Make Labor Visible
 
 Make labor visible means to make the hands that labored on the data visible.
 
-**How it applies:** The Epoch AI dataset’s staff count estimates are based on looking for a count of full-time, permanent staff. It specifies that it is not looking for a count of part-time data contractors in it’s total staff count. As the principle states, they are some of the hands that labored on the data, where the labor should be visible such that they’re included in a claim of “total staff count”.
+How it applies: The Epoch AI dataset’s staff count estimates are based on looking for a count of full-time, permanent staff. It specifies that it is not looking for a count of part-time data contractors in it’s total staff count. As the principle states, they are some of the hands that labored on the data, where the labor should be visible such that they’re included in a claim of “total staff count”.
 
-**Example:** The Epoch AI “Staff Count” of 6,000 on Aug. 6, 2025 for Google in the Full AI division does not reflect it’s actual full staff, it was not looking for the part-time contractors who have hands on the data when finding that count.
+Example: The Epoch AI “Staff Count” of 6,000 on Aug. 6, 2025 for Google in the Full AI division does not reflect it’s actual full staff, it was not looking for the part-time contractors who have hands on the data when finding that count.
         </textarea>
       </section>
 
-      <!-- SLIDE 9: GEN AI COMPARISON -->
-      <section data-markdown class="scrollable">
+      <!-- Gen AI Comparison -->
+      <section data-markdown>
         <textarea data-template>
 # Gen AI Comparison
 
@@ -398,87 +137,39 @@ After we wrote and ported all the slides, we had a custom AI framework go throug
 
 Our main model runner used Gemini 3.8 flash with high reasoning. Additionally, we used Hermes and Jav for a more deterministic approach while having GSD and a custom swarm skill to scrape the internet for fact checking. The agent swarm talked via a shared thread and saved contexts via sql lite database. 
 
-**Findings:** 
-- The AI red team critiqued our initial drafts for lacking citations on Allbirds stock movement and Microsoft layoff numbers, which we then verified through SEC filings and news archives.
-- When tasked with answering the 7 principles itself, standard Gen AI defaulted to abstract ethical platitudes without balance-sheet literacy, conflating Annualized Run Rate (ARR) with net profit and erasing the outsourced contractor workforce.
-- The multi-agent swarm verified the compute spend numbers ($5.8B OpenAI compute against $5.5B ARR) and confirmed the local infrastructure impacts (Yukon 2.5 MGD water demand).
+Findings: 
+- TODO
         </textarea>
       </section>
 
     </div>
   </div>
 
-  <!-- Reveal.js Scripts (Local with CDN Fallback) -->
   <script src="mp9_files/libs/revealjs/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js" onerror="this.onerror=null;"></script>
-
-  <!-- Reveal.js Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
   <script src="mp9_files/libs/revealjs/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js" onerror="this.onerror=null;"></script>
-  <script src="mp9_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="mp9_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="mp9_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
 
   <script>
-    // Initialize Reveal.js with Parallax Background and Markdown
     Reveal.initialize({
-      // Parallax background image (Local high-res panoramic cyber nebula)
-      parallaxBackgroundImage: 'parallax-bg.jpg',
+      // Parallax background image
+      parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 
-      // Parallax background size (CSS syntax, pixels only)
-      parallaxBackgroundSize: '2400px 1080px',
+      // Parallax background size
+      parallaxBackgroundSize: '2100px 900px',
 
       // Number of pixels to move the parallax background per slide
       parallaxBackgroundHorizontal: 200,
       parallaxBackgroundVertical: 50,
 
-      // Display dimensions & Scaling
-      width: 1600,
-      height: 900,
-      margin: 0.05,
-      minScale: 0.2,
-      maxScale: 1.0,
-
-      // Navigation & Layout
       controls: true,
       progress: true,
-      slideNumber: 'c/t',
+      slideNumber: true,
       hash: true,
       history: true,
-      center: false,
-      transition: 'slide',
-      backgroundTransition: 'fade',
-      mouseWheel: false,
 
-      // Plugins
-      plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ]
+      plugins: [ RevealMarkdown ]
     });
-
-    // Update Top Navigation Bar on slide change
-    function updateTopNav(event) {
-      const currentSlide = event.currentSlide;
-      const h1 = currentSlide.querySelector('h1');
-      const titleEl = document.getElementById('slide-title');
-      const badgeEl = document.getElementById('slide-badge');
-
-      if (h1 && titleEl) {
-        titleEl.textContent = h1.textContent.trim();
-      }
-      if (badgeEl && h1) {
-        const text = h1.textContent.trim();
-        if (text.includes('Principle #')) {
-          const match = text.match(/Principle #\d+/);
-          badgeEl.textContent = match ? match[0].toUpperCase() : 'DATA FEMINISM';
-        } else if (text.includes('Gen AI')) {
-          badgeEl.textContent = 'SLIDE 8: AI AUDIT';
-        } else {
-          badgeEl.textContent = 'CS 5083: DATA FEMINISM';
-        }
-      }
-    }
-
-    Reveal.on('ready', updateTopNav);
-    Reveal.on('slidechanged', updateTopNav);
   </script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 ---
-title: "Data Feminism Principles"
-subtitle: "When will AI be profitable and how will it be achieved?"
+title: "When will AI be profitable and how will it be achieved?"
 format:
   revealjs:
     theme: black
@@ -15,14 +14,18 @@ format:
     parallax-background-vertical: 50
 ---
 
-# Data Feminism Principles
+# When will AI be profitable and how will it be achieved?
 
-### When will AI be profitable and how will it be achieved?
+Group 25: Taylor Wise, Brian Boedecker, Arika Khor  
+Dataset: Epoch AI & [isaiprofitable.com](https://isaiprofitable.com) ("When will AI be profitable and how will it be achieved?")
 
-**Group 25:** Taylor Wise, Brian Boedecker, Arika Khor  
-**Course:** CS 4083 / CS 5083 Ethical and Responsible AI  
-**Assignment:** Data Analysis (Week 5 Asynchronous Assignment)  
-**Dataset:** Epoch AI & [isaiprofitable.com](https://isaiprofitable.com) (*"When will AI be profitable and how will it be achieved?"*)
+---
+
+## isaiprofitable.com Live Tracker
+
+[↗ Open isaiprofitable.com in New Tab](https://isaiprofitable.com)
+
+<iframe src="https://isaiprofitable.com" width="100%" height="520px" style="border: 1px solid #38bdf8; border-radius: 8px;"></iframe>
 
 ---
 

@@ -5,8 +5,9 @@ format:
   revealjs:
     theme: black
     slide-number: true
-    parallax-background-image: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
-    parallax-background-size: "2100px 900px"
+    center: false
+    parallax-background-image: "city-parallax.png"
+    parallax-background-size: "2304px 1296px"
     parallax-background-horizontal: 200
     parallax-background-vertical: 50
 ---

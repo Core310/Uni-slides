@@ -12,10 +12,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
 
   <style>
+    /* Ensure content is positioned from top and has generous bottom padding for scrolling */
     .reveal .slides section {
       text-align: left;
+      top: 0 !important;
       overflow-y: auto !important;
       max-height: 85vh !important;
+      box-sizing: border-box !important;
+      padding: 40px 40px 140px 40px !important;
+    }
+
+    .reveal .slides section > *:last-child {
+      margin-bottom: 80px !important;
+    }
+
+    /* Custom subtle scrollbar */
+    .reveal .slides section::-webkit-scrollbar {
+      width: 8px;
+    }
+    .reveal .slides section::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+    }
+    .reveal .slides section::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 4px;
+    }
+    .reveal .slides section::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.7);
     }
   </style>
 </head>
@@ -152,16 +176,17 @@ Findings:
 
   <script>
     Reveal.initialize({
-      // Parallax background image
-      parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // Parallax background image (City parallax pixel art, dimmed by 20%)
+      parallaxBackgroundImage: 'city-parallax.png',
 
-      // Parallax background size
-      parallaxBackgroundSize: '2100px 900px',
+      // Parallax background size (pixels)
+      parallaxBackgroundSize: '2304px 1296px',
 
-      // Number of pixels to move the parallax background per slide
+      // Movement per slide
       parallaxBackgroundHorizontal: 200,
       parallaxBackgroundVertical: 50,
 
+      center: false,
       controls: true,
       progress: true,
       slideNumber: true,

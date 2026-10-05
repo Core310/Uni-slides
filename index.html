@@ -1,63 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIROU Slides Index</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #f8f9fa;
-        }
-        h1 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 0.5rem;
-            color: #007bff;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            background: white;
-            margin-bottom: 0.5rem;
-            padding: 0.75rem 1rem;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: transform 0.1s ease;
-        }
-        li:hover {
-            transform: translateX(5px);
-            background-color: #e9ecef;
-        }
-        a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            font-weight: 500;
-        }
-        .path {
-            font-size: 0.85rem;
-            color: #6c757d;
-            margin-top: 0.2rem;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When will AI be profitable and how will it be achieved?</title>
+
+  <!-- Reveal.js Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+
+  <style>
+    :root {
+      --accent-color: #38bdf8;
+      --card-bg: rgba(11, 16, 26, 0.86);
+      --card-border: rgba(56, 189, 248, 0.28);
+    }
+
+    /* Transparent viewport so city parallax background shows through */
+    .reveal-viewport {
+      background: transparent !important;
+    }
+
+    .reveal .slides {
+      pointer-events: auto;
+    }
+
+    /* Clean slide card with guaranteed bottom clearance for scrolling */
+    .reveal .slides section {
+      text-align: left;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box !important;
+      padding: 35px 50px 180px 50px !important;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Force uncollapsible bottom space so the last lines are NEVER cut off */
+    .reveal .slides section::after {
+      content: "";
+      display: block;
+      height: 160px;
+      width: 100%;
+      clear: both;
+    }
+
+    .reveal .slides section > *:last-child {
+      margin-bottom: 100px !important;
+    }
+
+    /* Headings */
+    .reveal h1, .reveal h2, .reveal h3 {
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .reveal h1 {
+      font-size: 1.95em;
+      margin-bottom: 0.5em;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.25em;
+    }
+
+    .reveal h2 {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-bottom: 0.4em;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      color: var(--accent-color);
+      margin-bottom: 0.5em;
+    }
+
+    .reveal p, .reveal li {
+      font-size: 0.9em;
+      line-height: 1.6;
+      color: #f1f5f9;
+      margin-bottom: 0.8em;
+    }
+
+    .reveal strong {
+      color: #38bdf8;
+    }
+
+    .reveal a {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .reveal ul {
+      padding-left: 1.5em;
+      margin-bottom: 0.8em;
+    }
+
+    .reveal li {
+      margin-bottom: 0.35em;
+    }
+
+    /* Custom scrollbar */
+    .reveal .slides section::-webkit-scrollbar {
+      width: 8px;
+    }
+    .reveal .slides section::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+    }
+    .reveal .slides section::-webkit-scrollbar-thumb {
+      background: rgba(56, 189, 248, 0.6);
+      border-radius: 4px;
+    }
+    .reveal .slides section::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-color);
+    }
+  </style>
 </head>
 <body>
-    <h1>Project Pages Index</h1>
-    <ul>
-        <li><a href="data-feminism.html">data-feminism.html</a><div class="path">root</div></li>
-        <li><a href="mp9.html">mp9.html</a><div class="path">root</div></li>
-        <li><a href="PDN-quiz/PDN-quiz.html">PDN-quiz.html</a><div class="path">PDN-quiz</div></li>
-        <li><a href="swa-course/swa.html">swa.html</a><div class="path">swa-course</div></li>
-    </ul>
-    <footer style="margin-top: 3rem; font-size: 0.8rem; color: #adb5bd;">
-        Last updated: Mon Oct  5 02:35:52 PM CDT 2026
-    </footer>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 0: Title Slide with Vertical Sub-slide Below for isaiprofitable.com -->
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+# When will AI be profitable and how will it be achieved?
+
+Group 25: Taylor Wise, Brian Boedecker, Arika Khor  
+Dataset: Epoch AI & [isaiprofitable.com](https://isaiprofitable.com) ("When will AI be profitable and how will it be achieved?")
+
+<div style="margin-top: 35px; font-size: 0.85em; color: var(--accent-color);">
+  ↓ Press Down Arrow to view the live isaiprofitable.com tracker below
+</div>
+          </textarea>
+        </section>
+
+        <!-- Vertical Sub-slide Directly Below -->
+        <section>
+          <h2>isaiprofitable.com Live Tracker</h2>
+          <p style="margin-bottom: 15px;">
+            <a href="https://isaiprofitable.com" target="_blank" style="color: #38bdf8; text-decoration: underline; font-weight: bold;">↗ Open isaiprofitable.com in New Tab</a>
+          </p>
+          <iframe src="https://isaiprofitable.com" title="isaiprofitable.com" style="width: 100%; height: 520px; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 10px; background: #000000;" loading="lazy"></iframe>
+        </section>
+      </section>
+
+      <!-- Principle 1 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #1: Examining Power
+
+Examining power (In terms of datasets) interprets as who controls the data in how it is collected, utilized, and acted upon.
+
+**How it applies:** While this dataset is published by Epoch AI and gathered through other sources showcasing AI profitability currently, you could argue that the power of the data and who controls it are the investors of the companies. Some companies may not want to create anything with AI, but are largely forced to for shareholder value.
+
+**Example:** Allbirds (A sustainable material shoe company) becoming a data center focused rental company. After announcing this, their stock climbed as high as 875%.
+        </textarea>
+      </section>
+
+      <!-- Principle 2 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #2: Challenging Power
+
+Challenging power (In terms of datasets) interprets as taking the next step and how we could remedy and allow fair control of the power over the dataset. 
+
+**How it applies:** This applies to our dataset because if we allow investors to control companies, then regulations, innovation and technology security suffer as it is now with our current implementation of AI. Noting that the top 10% of Americans control 93% of the stock market.
+
+**Example:** As of this moment there are not great examples of challenging power, but there are good examples of people not using it. For example, OpenAI becoming a non-profit company and spending $16.3B while having a for profit parent company. Another example is when Elon Musk combined that of XAi and SpaceX to make it look like the company is more profitable than it is for investors to donate more.
+        </textarea>
+      </section>
+
+      <!-- Principle 3 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #3: Elevate Emotion and Embodiment
+
+Elevating emotion and embodiment for our dataset interprets as trying not to persuade the reader through graphs and other means by only showing a portion of the story, even if the data is correct. 
+
+**How it applies:** For our dataset, this applies because there are plenty of graphs showcasing that AI is becoming more profitable than it was last year, and the year before that and..etc. However, What the graphs are missing are how many people have been laid off to save on these costs and how much has been invested in totality to un-equivalently skew the numbers. 
+
+**Example:** Microsoft reported a net income of $133B this fiscal year compared to 2025’s $101B and largely credited AI. While these numbers may be true, and showcase a graph to investors that number do go up, it skips the fact that nearly 5,500 jobs were lost.
+        </textarea>
+      </section>
+
+      <!-- Principle 4 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #4: Rethink Binaries and Hierarchies
+
+isaiprofitable.com shows us more or less how much of a bubble a lot of funding is being applied to. When we take a look at the list, there's a fair amount of startup or recently AI promoted companies having money injected into them by venture capitalists. It's fairly obvious that money is being injected into all of these companies, but is either floating around between them, or spent on data center costs. 
+
+**Case 1: Facebook's Reality Labs project: The Metaverse with:**
+- loss of $88 billion 
+- gain of $11.8 billion (rough estimate). 
+- VC funding of $5.97 billion
+
+**Case 2: Nvidia investing into CoreWeave:**
+- CoreWeave took said investments (and billions debt backed by Nvidia) to Nvidia to buy a few thousand H100s. 
+- Nvidia books this as record hardware revenue inflating their stock more
+        </textarea>
+      </section>
+
+      <!-- Principle 5 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #5: Embrace Pluralism
+
+As we saw in the most recent assignment of data centre companies lobbying to get their allotted power and water over the local municipal, 
+
+**Datasets:**
+- isaiprofitable.com and epoch.ai both don't mention the human cost of the profit being gained. 
+- While local community impact is fairly hard to quantify, there's a fair amount in the news about this.  
+
+**Case details:**
+- Beltline Energy attempting to take up to 2.5 MGD (100%) of Yukon, OK's municipal wastewater buffer for a 1 GW campus, putting local agricultural wells at risk.
+- xAI installing unregistered methane gas turbines in Memphis, TN to bypass environmental permits, pushing industrial pollution into local residential neighborhoods.
+        </textarea>
+      </section>
+
+      <!-- Principle 6 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #6: Consider Context
+
+Consider context means to consider the background behind why a number is there and what might have affected it before deciding what it must mean.
+
+**How it applies:** This applies to our dataset because “Annualized Revenue” does not provide a full look into whether AI is profitable. Considering the context behind how much money has been invested, staff count, etc. is crucial.
+
+**Example:** OpenAI estimated $5.5 billion Annualized Revenue on Dec. 31, 2024, and it’s total compute spend in 2024 was around $5.8 billion. Annualized revenue is just the expected revenue over the next 12 months, not how much it made that year, so that compute spend can’t just be subtracted from the annualized revenue. Additionally, compute spend doesn’t include all additional costs to subtract from revenue, such as facilities, salaries, etc.
+        </textarea>
+      </section>
+
+      <!-- Principle 7 -->
+      <section data-markdown>
+        <textarea data-template>
+# Principle #7: Make Labor Visible
+
+Make labor visible means to make the hands that labored on the data visible.
+
+**How it applies:** The Epoch AI dataset’s staff count estimates are based on looking for a count of full-time, permanent staff. It specifies that it is not looking for a count of part-time data contractors in it’s total staff count. As the principle states, they are some of the hands that labored on the data, where the labor should be visible such that they’re included in a claim of “total staff count”.
+
+**Example:** The Epoch AI “Staff Count” of 6,000 on Aug. 6, 2025 for Google in the Full AI division does not reflect it’s actual full staff, it was not looking for the part-time contractors who have hands on the data when finding that count.
+        </textarea>
+      </section>
+
+      <!-- Gen AI Comparison -->
+      <section data-markdown>
+        <textarea data-template>
+# Gen AI Comparison
+
+After we wrote and ported all the slides, we had a custom AI framework go through as a red team "grader" to poke holes in all of our slides. 
+
+Our main model runner used Gemini 3.8 flash with high reasoning. Additionally, we used Hermes and Jav for a more deterministic approach while having GSD and a custom swarm skill to scrape the internet for fact checking. The agent swarm talked via a shared thread and saved contexts via sql lite database. 
+
+**Findings:** 
+- **Empirical Grounding vs. Platitudes**: The AI red team flagged our initial drafts for lacking citations on Allbirds' 875% surge and Microsoft's 5,500 layoffs, which we verified against SEC filings. When tasked with analyzing the dataset through Data Feminism on its own, commercial Gen AI defaulted to abstract corporate ethics slogans without balance-sheet grounding.
+- **Accounting Literacy Failure**: Commercial AI conflated Annualized Run Rate (ARR) with net profit, failing to recognize that OpenAI's $5.8B compute burn wiped out its $5.5B ARR, and ignoring recurring 3-year GPU depreciation cycles.
+- **Physical Utility & Labor Erasure**: The AI model framed "pluralism" only as token diversity in training text, missing municipal water extraction (Yukon 2.5 MGD) and erasing the 50,000+ outsourced RLHF annotators who align the models.
+        </textarea>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+
+  <script>
+    Reveal.initialize({
+      width: 1400,
+      height: 850,
+      margin: 0.08,
+      minScale: 0.2,
+      maxScale: 1.0,
+
+      // Parallax background image (City pixel art, dimmed 20%)
+      parallaxBackgroundImage: 'city-parallax.png',
+      parallaxBackgroundSize: '2304px 1296px',
+      parallaxBackgroundHorizontal: 200,
+      parallaxBackgroundVertical: 50,
+
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      history: true,
+
+      plugins: [ RevealMarkdown ]
+    });
+  </script>
 </body>
 </html>

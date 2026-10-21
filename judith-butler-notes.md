@@ -1,0 +1,199 @@
+# Judith Butler: "Critically Queer"
+### Language, Power, and the Politics of Gender
+
+Arika Khor  
+WGS 3563: Gender and Global Politics  
+Dr. Hadas Cohen  
+October 23, 2026  
+
+Note:
+Today we are breaking down Judith Butler's 1993 essay Critically Queer, which is the final chapter of Bodies That Matter. Butler is often treated like an impossible philosopher, but their core mechanism is very direct once you strip away the dense jargon: how language materializes bodies into men and women, how compulsory heterosexuality is enforced through hidden grief, and how marginalized groups can take a weaponized slur like queer and turn it into a tool of political defiance. Over the next fifteen minutes, we will walk through the historical crisis behind the text, clear up the biggest misunderstandings about performativity, connect the reading to Paris is Burning, and end with three discussion questions for the class.
+
+---
+
+## Historical Urgency: Early 1990s
+- Published in 1993 following the explosive impact of Gender Trouble (1990)
+- The HIV/AIDS Crisis: Massive death toll, institutional neglect, and federal silence
+- Radical Direct Action: ACT UP (1987) and Queer Nation (1990) reject polite assimilationist lobbying
+- Reclaiming the Slur: Seizing "queer" off the street as a confrontational, militant battle cry: "We're here, we're queer, get used to it"
+
+Note:
+To understand why Butler wrote this in 1993, you have to look at the atmosphere of the early nineties. The HIV/AIDS epidemic was wiping out an entire generation of gay men, trans women, and people of color, while the government and medical establishment met the catastrophe with silence and moral condemnation. In response, activist groups like ACT UP and Queer Nation broke away from polite gay rights groups that were trying to appeal to middle-class respectability. Instead of asking for tolerance, they took over streets, staged die-ins, and weaponized the word queer. For decades, queer had been a street slur used to justify physical assault. Queer Nation turned that slur into an in-your-face battle cry. Butler writes this essay directly in the shadow of that movement, asking what actually happens when you seize an injurious term from your oppressor and use it as an organizing banner.
+
+---
+
+## Clearing the Myth: Performance vs. Performativity
+- The Misunderstanding of Gender Trouble: Critics assumed gender was a voluntary theatrical costume
+- Butler's Correction in Bodies That Matter (1993): Gender is NOT a free consumer choice picked out of a wardrobe
+- Performance: A conscious, theatrical act staged by an already-existing person
+- Performativity: The forced, repetitive disciplinary process through which a subject is produced in the first place
+
+Note:
+Here is the single most important distinction you need to understand Butler: performativity is not theatrical performance. When Butler published Gender Trouble three years earlier, people celebrated them because they thought Butler was saying, 'Gender is just a costume! You can put on high heels today and combat boots tomorrow, and change your gender whenever you feel like it.' Butler hated that interpretation. In Bodies That Matter, Butler explicitly pushes back against this voluntaristic reading. You are not an already-existing sovereign individual who gets to pick your gender out of a wardrobe. Rather, performativity is a compulsory, disciplinary script forced upon you by legal, medical, and social institutions. You do not do gender; gender does you. It is a set of expectations and punishments that shape your body long before you ever develop conscious thought.
+
+---
+
+## The Linguistic Engine: J.L. Austin & Speech Acts
+- J.L. Austin (1962): Ordinary Language Philosophy & "Performative Utterances"
+- Descriptive vs. Performative: Constative language describes facts; performative language accomplishes an action
+- The Medical Interpellation: A doctor declaring "It is a girl!" at birth is not reporting a biological fact
+- "Girling" as Compulsion: Initiating an administrative, legal, and disciplinary pipeline of gendered surveillance
+
+Note:
+Where does Butler get the word performativity? They borrow it from ordinary language philosopher J.L. Austin and his 1962 book How to Do Things With Words. Austin pointed out that language does not just describe the world; certain words actually do things. When a judge says 'I sentence you to five years,' or an officiant says 'I pronounce you husband and wife,' speaking the words creates a new social reality. Butler takes Austin's linguistic framework and applies it to the human body. The most famous example in this essay is the moment of birth: when the doctor looks at an infant and announces, 'It is a girl!', that is not an innocent descriptive report. It is a performative utterance. It initiates what Butler calls the lifelong process of girling. The child is placed into an administrative, familial, and legal pipeline where she is repeatedly instructed, rewarded, and punished until she conforms to the social requirements of being a woman.
+
+---
+
+## Citationality & Iterability: Why Norms Are Fragile
+- Jacques Derrida: Iterability and the necessity of citation
+- Why Performatives Work: A judge has no power in a vacuum; words only carry authority by citing past precedent and established law
+- Compulsory Repetition: No human being invents manhood or womanhood; we are forced to repeat pre-existing historical scripts
+- The Structural Glitch: Because repetition is never identical, every citation introduces the risk of slippage, failure, and subversion
+
+Note:
+This brings us to Jacques Derrida's critique of Austin, which Butler relies on heavily. Why does a judge's sentence or an officiant's wedding decree have power? Derrida argues it only works because it cites an established historical law. If an actor on a Broadway stage says 'I sentence you to prison,' nobody goes to jail, because the context does not cite real state authority. Butler applies this idea of citationality to gender. Nobody wakes up and invents what it means to be a man or a woman from scratch. You only pass as a man or woman by continually citing historical norms that existed centuries before you were born. But here is the punchline: because gender must be repeated every single day, the system is fragile. Every time a script has to be cited again, there is a risk of error, slippage, or resistance. Normative heterosexuality is terrified of these slippages because they reveal that the entire system is an artificial construction, not a law of nature.
+
+---
+
+## Discursive Resignification: Inverting the Injurious Slur
+- The Wound of the Name: Being hailed by a slur is an experience of linguistic degradation and social subordination
+- The Mechanism of Resignification: Citing the derogatory term in an unintended, non-authorized context
+- Turning Trauma into Coalition: How ACT UP and Queer Nation detached "queer" from homophobic violence and transformed it into collective defense
+- A Permanent Paradox: The word always retains the ghost of its violent past, which is precisely where its political bite comes from
+
+Note:
+Now we get to the core of Critically Queer: linguistic resignification. Butler asks, how does a community fight back against speech that wounds? When someone hurls a homophobic slur at you on the street, the injury does not come from the acoustic sound of the word. It hurts because that word cites centuries of state violence, police raids, and physical abuse. But Butler points out that language has no fixed, permanent owner. Because words rely on repetition, a targeted community can grab that slur, pull it out of its original violent context, and cite it back against the dominant culture. When thousands of activists march down the street yelling 'We're here, we're queer,' they are not erasing the history of the word; they are exploiting its shock value. Resignification works because the trauma of the word is turned inside out to expose the violence of the oppressor.
+
+---
+
+## Heterosexual Melancholia & Unmourned Grief
+- The Heterosexual Matrix: Enforcing gender through the prohibition of same-sex love
+- Disavowed Grief: To become a "proper" man, a boy must renounce love for men, but he is forbidden from mourning that lost love
+- Social Melancholia: Straight identity is built upon an internal graveyard of unacknowledged, unmourned queer attachments
+- The AIDS Context: A culture that refuses to publicize or grieve the mass deaths of queer people
+
+Note:
+One of the deepest and most overlooked arguments in this essay is Butler's psychoanalytic breakdown of heterosexual melancholia. Butler asks: what does it actually cost a person to fit into normal heterosexuality? To become a conventional man, you do not just learn to love women; you are forced to violently renounce any attachment to other men. But here is the catch: society does not allow you to mourn that loss. If a straight man mourns the loss of another man, his own straightness is called into question. Butler argues that normative heterosexuality is actually built on top of unresolved grief and buried loss. In 1993, this was not just an abstract Freudian point. Tens of thousands of gay men were dying of AIDS, and mainstream American society refused to treat their deaths as real human losses worthy of national mourning. Butler shows that the violent rejection of homosexuality is driven by an inability to confront the grief that heteronormativity requires.
+
+---
+
+## Paris is Burning & The Politics of "Realness"
+- The Harlem Drag Balls: Competing in categories like "Executive Realness", "Town and Country", and "Military"
+- The Illusion of the Original: Drag does not show that gender is fake; it reveals that all gender is an imitation without an original
+- Realness as Survival: Passing is not just fun theater; for poor trans women of color (like Venus Xtravaganza), failing to pass meant death
+- Subversion vs. Re-inscription: Does copying white, wealthy corporate aesthetics challenge the power structure or reinforce it?
+
+Note:
+In our syllabus, Butler is paired directly with Jennie Livingston's 1990 documentary Paris is Burning, which documents the Black and Latino drag ball culture in Harlem. Butler spends a significant portion of Bodies That Matter analyzing this film. In the balls, contestants compete for what they call realness—the ability to blend in completely as a white corporate executive, a wealthy housewife, or an ivy league student. Butler argues that realness is the ultimate proof of performativity. When a poor, queer person of color walks a runway and looks exactly like a Wall Street broker, it reveals that the actual Wall Street broker is also just putting on a suit and performing a script. Drag does not prove that queer people are fake; it proves that the dominant identity has no natural original. At the same time, Butler acknowledges the brutal reality: realness is about survival. When Venus Xtravaganza was murdered for being trans, it proved that the heterosexual matrix punishes anyone who fails to pass.
+
+---
+
+## Philosophical Counter-Debate: Martha Nussbaum's Critique
+- Martha Nussbaum (1999): "The Professor of Parody" in The New Republic
+- The Charge of Quietism: Accuses Butler of replacing structural, institutional legal reform with small symbolic parodies
+- The Obscurity Critique: Dense linguistic theory alienates the working-class women and activists who need practical legal tools
+- Butler's Defense: You cannot reform legal institutions without first analyzing the linguistic frameworks that define what a "legitimate person" is
+
+Note:
+To give our presentation an intellectual edge, we should introduce the major philosophical critique against Butler, which was famously launched by philosopher Martha Nussbaum in her 1999 essay The Professor of Parody. Nussbaum argued that Butler's theory is politically self-defeating. She asked: does parodying gender norms on a stage or in an academic seminar actually help a woman trapped in an abusive marriage, or change employment discrimination laws? Nussbaum accused Butler of academic quietism—retreating from real institutional politics into dense linguistic wordplay. Butler's response, however, is that you cannot fix legal systems without fixing the categories the law relies on. If the law defines citizens, harassment, or sex through a rigid binary, legal reforms will keep reproducing the same exclusions. Bringing up this debate shows the class that Butler's ideas are not settled doctrine, but an ongoing argument about theory versus direct political action.
+
+---
+
+## The Political Warning: Why "Queer" Must Never Settle Down
+- Against Gatekeeping: "Queer" must not become an exclusive membership card or an official demographic category
+- The Anti-Normative Edge: Once an identity becomes respectable and institutionalized, it begins policing its own borders
+- Sustaining the Critical Function: Butler's demand that the term remain open, contested, and vulnerable to new challenges
+- Core Takeaway: Language is both a cage and a lever; power constructs us, but power's reliance on repetition gives us the chance to subvert it
+
+Note:
+Butler concludes Critically Queer with a vital warning that feels even more relevant today: the word queer must never settle down. Butler warns that if the movement turns queer into a standardized identity category with a checklist of who qualifies and who does not, it will end up policing people just like the heterosexual matrix did. The moment a radical word becomes respectable, corporate, or institutionalized, it loses its ability to challenge the status quo. For Butler, the power of queer lies in the fact that it is unstable, unfinished, and always contested. Language is where power disciplines our bodies, but because power is forced to repeat itself every day, language is also where we can jam the gears of the machine.
+
+---
+
+## Three Class Discussion Questions
+1. Performativity in Daily Life: Butler argues that gender is an enforced repetition of norms rather than an outfit chosen each morning. Where in university life, sports, or family structures do you see gender enforced through disciplinary repetition rather than personal choice?
+2. Limits of Resignification: Given how the word "queer" was resignified from a lethal slur into an academic department and political banner, are there limits to linguistic resignification? Can any derogatory term be completely stripped of its trauma, or does the original wound always linger?
+3. Realness in Paris is Burning: In Paris is Burning, contestants compete for "realness" by copying the aesthetics of corporate wealth, military authority, and domestic privilege. Does achieving "realness" undermine dominant social hierarchies, or does it reinforce them by treating them as the gold standard of success?
+
+Note:
+To wrap up our fifteen minutes, I have three questions to throw out to the room:
+First, thinking about Butler's claim that gender is a disciplinary routine rather than a personal choice, where on campus or in your personal routines do you experience gender as a mandatory rule rather than an expression of personal freedom?
+Second, on linguistic resignification: we saw how the word queer was flipped from a violent insult into an empowering coalition banner. But does that work for all slurs? Can a community ever completely erase the trauma of an injurious word, or does the history of violence always leave a mark?
+Third, looking at Paris is Burning: when ball contestants walk the floor to prove they can pass as white Wall Street executives or military officers, are they subverting the system by proving anyone can perform it, or are they re-affirming that elite white wealth is the only status that truly matters?
+
+---
+
+## References (BibTeX)
+
+```bibtex
+@incollection{butler1993critically,
+  author    = {Judith Butler},
+  title     = {Critically Queer},
+  booktitle = {Bodies That Matter: On the Discursive Limits of "Sex"},
+  publisher = {Routledge},
+  address   = {New York and London},
+  year      = {1993},
+  pages     = {223--242}
+}
+
+@book{butler1990gender,
+  author    = {Judith Butler},
+  title     = {Gender Trouble: Feminism and the Subversion of Identity},
+  publisher = {Routledge},
+  address   = {New York and London},
+  year      = {1990}
+}
+
+@book{austin1962how,
+  author    = {J. L. Austin},
+  title     = {How to Do Things with Words},
+  publisher = {Oxford University Press},
+  address   = {Oxford},
+  year      = {1962}
+}
+
+@article{derrida1977signature,
+  author    = {Jacques Derrida},
+  title     = {Signature Event Context},
+  journal   = {Glyph},
+  volume    = {1},
+  year      = {1977},
+  pages     = {172--197}
+}
+
+@book{foucault1978history,
+  author    = {Michel Foucault},
+  title     = {The History of Sexuality, Volume 1: An Introduction},
+  publisher = {Pantheon Books},
+  address   = {New York},
+  year      = {1978}
+}
+
+@article{rich1980compulsory,
+  author    = {Adrienne Rich},
+  title     = {Compulsory Heterosexuality and Lesbian Existence},
+  journal   = {Signs: Journal of Women in Culture and Society},
+  volume    = {5},
+  number    = {4},
+  year      = {1980},
+  pages     = {631--660}
+}
+
+@misc{livingston1990paris,
+  author       = {Jennie Livingston},
+  title        = {Paris is Burning},
+  howpublished = {Film documentary},
+  publisher    = {Off-White Productions / Miramax},
+  year         = {1990}
+}
+
+@article{nussbaum1999professor,
+  author    = {Martha C. Nussbaum},
+  title     = {The Professor of Parody: The Hip Defeatism of Judith Butler},
+  journal   = {The New Republic},
+  volume    = {220},
+  number    = {8},
+  year      = {1999},
+  pages     = {37--45}
+}
+```

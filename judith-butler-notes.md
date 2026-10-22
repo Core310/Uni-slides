@@ -1,5 +1,5 @@
 # Judith Butler: "Critically Queer" (1993)
-### Bodies That Matter, Chapter 8, pp. 223–242
+### Bodies That Matter, Chapter 8
 
 Arika Khor  
 WGS 3563: Gender and Global Politics  
@@ -11,7 +11,7 @@ Today we are breaking down Judith Butler's 1993 essay Critically Queer, which is
 
 ---
 
-## Opening the Text: Affirming "Queer" (pp. 223–225)
+## Opening the Text: Affirming "Queer"
 - The Urgent Question: What does it mean to affirm a term that has historically functioned as a lethal street slur?
 - The Historical Crisis (1993): Devastating AIDS death toll met by federal silence and institutional abandonment
 - Militant Direct Action: ACT UP (1987) and Queer Nation (1990) reject polite assimilationist lobbying
@@ -22,7 +22,7 @@ Butler opens Critically Queer on page 223 by asking a direct political question:
 
 ---
 
-## Clearing the Myth: Performance vs. Performativity (pp. 224–226)
+## Clearing the Myth: Performance vs. Performativity
 - The Misreading of Gender Trouble (1990): Critics assumed gender was a voluntary theatrical costume picked out of a wardrobe
 - Butler's Correction in Bodies That Matter: "Performativity is neither free play nor theatrical self-presentation"
 - Performance: A conscious, theatrical act staged by an already-existing subject
@@ -33,7 +33,7 @@ On pages 224 to 226, Butler addresses the single most widespread misunderstandin
 
 ---
 
-## The Linguistic Engine: J.L. Austin & "Girling" (pp. 226–227)
+## The Linguistic Engine: J.L. Austin & "Girling"
 
 > "In that naming, the girl is 'girled', brought into the domain of language and kinship through the interpellation of gender." — Judith Butler, Bodies That Matter (1993, p. 232)
 
@@ -47,7 +47,7 @@ Where does Butler get the word performativity? On pages 226 and 227, Butler draw
 
 ---
 
-## Derrida & Citationality: Fragility of the Script (pp. 227–228)
+## Derrida & Citationality: Fragility of the Script
 
 > "This repetition is not performed by a subject; this repetition is what enables a subject and constitutes the temporal condition for the subject." — Judith Butler (1993, p. 231)
 
@@ -61,7 +61,7 @@ Next, on pages 227 and 228, Butler uses Jacques Derrida's critique of Austin. Wh
 
 ---
 
-## Discursive Resignification: Inverting the Slur (pp. 228–230)
+## Discursive Resignification: Inverting the Slur
 - The Wound of the Name: Being hailed by a slur cites centuries of state violence, police raids, and physical abuse
 - The Mechanics of Resignification: Citing the derogatory term in an unintended, non-authorized context
 - Turning Trauma into Coalition: How ACT UP and Queer Nation detached "queer" from homophobic violence and made it a battle cry
@@ -72,7 +72,7 @@ Now we get to the core of Critically Queer on pages 228 to 230: linguistic resig
 
 ---
 
-## Heterosexual Melancholia & Disavowed Loss (pp. 232–236)
+## Heterosexual Melancholia & Disavowed Loss
 
 > "The straight man becomes the man he cannot love, and the straight woman becomes the woman she cannot love." — Judith Butler (1993, p. 235)
 
@@ -86,7 +86,7 @@ On pages 232 to 236, Butler develops one of the deepest psychoanalytic arguments
 
 ---
 
-## The Politics of Mourning & Ungrievable AIDS Lives (pp. 236–239)
+## The Politics of Mourning & Ungrievable AIDS Lives
 - The 1993 Crisis Grounding: Moving Freud's theory of melancholia into the literal trauma of the AIDS epidemic
 - Ungrievable Lives: Mainstream American culture refused to publicly acknowledge or mourn the deaths of thousands of gay men
 - Dehumanization via Silence: By treating queer deaths as unworthy of national grief, the state strips queer bodies of human status
@@ -97,7 +97,7 @@ On pages 236 to 239, Butler shifts Freud's concept of melancholia directly into 
 
 ---
 
-## Butler's Warning: Keeping "Queer" Contested (pp. 239–242)
+## Butler's Warning: Keeping "Queer" Contested
 
 > "If the term 'queer' is to remain a site of contestation, it must not become the property of an elite, nor can it become a term of exclusion." — Judith Butler (1993, p. 230)
 
@@ -221,5 +221,12 @@ Third, looking at Paris is Burning and the critiques from bell hooks and Jay Pro
   number    = {4},
   year      = {1980},
   pages     = {631--660}
+}
+
+@book{przybylo2019asexual,
+  author    = {Ela Przybylo},
+  title     = {Asexual Erotics: Intimate Readings of Compulsory Sexuality},
+  publisher = {Ohio State University Press},
+  year      = {2019}
 }
 ```

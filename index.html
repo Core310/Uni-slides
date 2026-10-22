@@ -3,299 +3,334 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>When will AI be profitable and how will it be achieved?</title>
-
-  <!-- Reveal.js Stylesheets -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
-
+  <title>Uni-slides | University Presentation Hub</title>
   <style>
     :root {
-      --accent-color: #38bdf8;
-      --card-bg: rgba(11, 16, 26, 0.86);
+      --bg-dark: #0a0e17;
+      --card-bg: rgba(13, 20, 36, 0.88);
       --card-border: rgba(56, 189, 248, 0.28);
+      --card-border-hover: rgba(56, 189, 248, 0.75);
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.35);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --tag-bg: rgba(56, 189, 248, 0.12);
+      --tag-border: rgba(56, 189, 248, 0.3);
+      --btn-primary-bg: #0284c7;
+      --btn-primary-hover: #0369a1;
+      --btn-secondary-bg: rgba(255, 255, 255, 0.08);
+      --btn-secondary-hover: rgba(255, 255, 255, 0.16);
     }
 
-    /* Transparent viewport so city parallax background shows through */
-    .reveal-viewport {
-      background: transparent !important;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .reveal .slides {
-      pointer-events: auto;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      background-image: linear-gradient(rgba(10, 14, 23, 0.82), rgba(10, 14, 23, 0.92)), url('city-parallax.png');
+      background-size: cover;
+      background-position: center bottom;
+      background-attachment: fixed;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 80px 20px;
     }
 
-    /* Clean slide card with guaranteed bottom clearance for scrolling */
-    .reveal .slides section {
-      text-align: left;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      max-height: 100% !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch;
-      box-sizing: border-box !important;
-      padding: 35px 50px 180px 50px !important;
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    /* Force uncollapsible bottom space so the last lines are NEVER cut off */
-    .reveal .slides section::after {
-      content: "";
-      display: block;
-      height: 160px;
+    .container {
       width: 100%;
-      clear: both;
+      max-width: 1100px;
     }
 
-    .reveal .slides section > *:last-child {
-      margin-bottom: 100px !important;
+    header {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    /* Headings */
-    .reveal h1, .reveal h2, .reveal h3 {
-      text-transform: none;
-      letter-spacing: -0.01em;
-      margin-top: 0;
+    .logo-badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
       color: #ffffff;
+      margin-bottom: 12px;
     }
 
-    .reveal h1 {
-      font-size: 1.95em;
-      margin-bottom: 0.5em;
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.25em;
-    }
-
-    .reveal h2 {
-      font-size: 1.6em;
-      color: #ffffff;
-      margin-bottom: 0.4em;
-    }
-
-    .reveal h3 {
-      font-size: 1.2em;
-      color: var(--accent-color);
-      margin-bottom: 0.5em;
-    }
-
-    .reveal p, .reveal li {
-      font-size: 0.9em;
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 24px auto;
       line-height: 1.6;
-      color: #f1f5f9;
-      margin-bottom: 0.8em;
     }
 
-    .reveal strong {
-      color: #38bdf8;
+    .quick-tips {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #cbd5e1;
     }
 
-    .reveal a {
-      color: var(--accent-color);
+    .quick-tips kbd {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: inherit;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .deck-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 28px;
+      margin-top: 36px;
+    }
+
+    @media (max-width: 580px) {
+      .deck-grid {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .deck-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px 30px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .deck-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 24px var(--accent-glow);
+    }
+
+    .card-top {
+      margin-bottom: 24px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--accent);
+    }
+
+    .tag.primary {
+      background: rgba(14, 165, 233, 0.22);
+      border-color: rgba(14, 165, 233, 0.45);
+      color: #7dd3fc;
+    }
+
+    .deck-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .deck-meta {
+      font-size: 0.88rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .deck-desc {
+      font-size: 0.92rem;
+      line-height: 1.62;
+      color: #cbd5e1;
+    }
+
+    .deck-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.18s ease, transform 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--btn-primary-bg);
+      color: #ffffff;
+      border: 1px solid #38bdf8;
+    }
+
+    .btn-primary:hover {
+      background: var(--btn-primary-hover);
+    }
+
+    .btn-secondary {
+      background: var(--btn-secondary-bg);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:hover {
+      background: var(--btn-secondary-hover);
+      color: #ffffff;
+    }
+
+    footer {
+      margin-top: 56px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
       text-decoration: underline;
-    }
-
-    .reveal ul {
-      padding-left: 1.5em;
-      margin-bottom: 0.8em;
-    }
-
-    .reveal li {
-      margin-bottom: 0.35em;
-    }
-
-    /* Custom scrollbar */
-    .reveal .slides section::-webkit-scrollbar {
-      width: 8px;
-    }
-    .reveal .slides section::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 4px;
-    }
-    .reveal .slides section::-webkit-scrollbar-thumb {
-      background: rgba(56, 189, 248, 0.6);
-      border-radius: 4px;
-    }
-    .reveal .slides section::-webkit-scrollbar-thumb:hover {
-      background: var(--accent-color);
     }
   </style>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
+  <div class="container">
+    <header>
+      <div class="logo-badge">Core310 Slide Hub</div>
+      <h1>University Presentations</h1>
+      <p class="subtitle">Interactive Reveal.js slide decks and teaching materials built with Quarto and Reveal.js.</p>
+      
+      <div class="quick-tips">
+        <span>Slide controls:</span>
+        <span><kbd>Space</kbd> / <kbd>&rarr;</kbd> Next Slide</span>
+        <span><kbd>S</kbd> Speaker Console (Notes)</span>
+        <span><kbd>F</kbd> Fullscreen</span>
+        <span><kbd>O</kbd> Slide Overview</span>
+      </div>
+    </header>
 
-      <!-- Slide 0: Title Slide with Vertical Sub-slide Below for isaiprofitable.com -->
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-# When will AI be profitable and how will it be achieved?
+    <main class="deck-grid">
+      <!-- Card 1: Judith Butler -->
+      <article class="deck-card">
+        <div class="card-top">
+          <div class="tags">
+            <span class="tag primary">WGS 3563</span>
+            <span class="tag">Gender & Global Politics</span>
+            <span class="tag">Reveal.js</span>
+          </div>
+          <h2 class="deck-title">Judith Butler: "Critically Queer" (1993)</h2>
+          <div class="deck-meta">Dr. Hadas Cohen &bull; October 23, 2026 &bull; Arika Khor</div>
+          <p class="deck-desc">
+            In-depth analysis of Butler's final chapter in <em>Bodies That Matter</em>. Explores the early 1990s AIDS crisis, ACT UP and Queer Nation direct action, the distinction between performance and compulsory performativity, Austin's speech acts, Derrida's citationality, slurs resignification, and connections to <em>Paris is Burning</em>.
+          </p>
+        </div>
 
-Group 25: Taylor Wise, Brian Boedecker, Arika Khor  
-Dataset: Epoch AI & [isaiprofitable.com](https://isaiprofitable.com) ("When will AI be profitable and how will it be achieved?")
-          </textarea>
-        </section>
+        <div class="deck-actions">
+          <a class="btn btn-primary" href="judith-butler.html">
+            Launch Slides &rarr;
+          </a>
+          <a class="btn btn-secondary" href="judith-butler-notes.md">
+            Speaker Notes Script
+          </a>
+          <a class="btn btn-secondary" href="judith-butler.qmd">
+            Quarto Source (.qmd)
+          </a>
+        </div>
+      </article>
 
-        <!-- Vertical Sub-slide Directly Below -->
-        <section style="padding: 25px !important;">
-          <iframe src="https://isaiprofitable.com" title="isaiprofitable.com" style="width: 100%; height: 640px; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 10px; background: #000000;" loading="lazy"></iframe>
-        </section>
-      </section>
+      <!-- Card 2: AI Profitability & Ethics -->
+      <article class="deck-card">
+        <div class="card-top">
+          <div class="tags">
+            <span class="tag primary">AI Ethics</span>
+            <span class="tag">Data Feminism</span>
+            <span class="tag">Group 25</span>
+          </div>
+          <h2 class="deck-title">When will AI be profitable and how will it be achieved?</h2>
+          <div class="deck-meta">Epoch AI & isaiprofitable.com &bull; Group 25 &bull; Arika Khor</div>
+          <p class="deck-desc">
+            Auditing modern generative AI financial metrics and infrastructure claims through the 7 principles of <em>Data Feminism</em>. Examines venture capital circularity, GPU depreciation cycles, municipal water and power extraction, and the erasure of global data annotation labor.
+          </p>
+        </div>
 
-      <!-- Principle 1 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #1: Examining Power
+        <div class="deck-actions">
+          <a class="btn btn-primary" href="data-feminism.html">
+            Launch Slides &rarr;
+          </a>
+          <a class="btn btn-secondary" href="data-feminism.qmd">
+            Quarto Source (.qmd)
+          </a>
+        </div>
+      </article>
+    </main>
 
-Examining power (In terms of datasets) interprets as who controls the data in how it is collected, utilized, and acted upon.
-
-**How it applies:** While this dataset is published by Epoch AI and gathered through other sources showcasing AI profitability currently, you could argue that the power of the data and who controls it are the investors of the companies. Some companies may not want to create anything with AI, but are largely forced to for shareholder value.
-
-**Example:** Allbirds (A sustainable material shoe company) becoming a data center focused rental company. After announcing this, their stock climbed as high as 875%.
-        </textarea>
-      </section>
-
-      <!-- Principle 2 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #2: Challenging Power
-
-Challenging power (In terms of datasets) interprets as taking the next step and how we could remedy and allow fair control of the power over the dataset. 
-
-**How it applies:** This applies to our dataset because if we allow investors to control companies, then regulations, innovation and technology security suffer as it is now with our current implementation of AI. Noting that the top 10% of Americans control 93% of the stock market.
-
-**Example:** As of this moment there are not great examples of challenging power, but there are good examples of people not using it. For example, OpenAI becoming a non-profit company and spending $16.3B while having a for profit parent company. Another example is when Elon Musk combined that of XAi and SpaceX to make it look like the company is more profitable than it is for investors to donate more.
-        </textarea>
-      </section>
-
-      <!-- Principle 3 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #3: Elevate Emotion and Embodiment
-
-Elevating emotion and embodiment for our dataset interprets as trying not to persuade the reader through graphs and other means by only showing a portion of the story, even if the data is correct. 
-
-**How it applies:** For our dataset, this applies because there are plenty of graphs showcasing that AI is becoming more profitable than it was last year, and the year before that and..etc. However, What the graphs are missing are how many people have been laid off to save on these costs and how much has been invested in totality to un-equivalently skew the numbers. 
-
-**Example:** Microsoft reported a net income of $133B this fiscal year compared to 2025’s $101B and largely credited AI. While these numbers may be true, and showcase a graph to investors that number do go up, it skips the fact that nearly 5,500 jobs were lost.
-        </textarea>
-      </section>
-
-      <!-- Principle 4 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #4: Rethink Binaries and Hierarchies
-
-isaiprofitable.com shows us more or less how much of a bubble a lot of funding is being applied to. When we take a look at the list, there's a fair amount of startup or recently AI promoted companies having money injected into them by venture capitalists. It's fairly obvious that money is being injected into all of these companies, but is either floating around between them, or spent on data center costs. 
-
-**Case 1: Facebook's Reality Labs project: The Metaverse with:**
-- loss of $88 billion 
-- gain of $11.8 billion (rough estimate). 
-- VC funding of $5.97 billion
-
-**Case 2: Nvidia investing into CoreWeave:**
-- CoreWeave took said investments (and billions debt backed by Nvidia) to Nvidia to buy a few thousand H100s. 
-- Nvidia books this as record hardware revenue inflating their stock more
-        </textarea>
-      </section>
-
-      <!-- Principle 5 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #5: Embrace Pluralism
-
-As we saw in the most recent assignment of data centre companies lobbying to get their allotted power and water over the local municipal, 
-
-**Datasets:**
-- isaiprofitable.com and epoch.ai both don't mention the human cost of the profit being gained. 
-- While local community impact is fairly hard to quantify, there's a fair amount in the news about this.  
-
-**Case details:**
-- Beltline Energy attempting to take up to 2.5 MGD (100%) of Yukon, OK's municipal wastewater buffer for a 1 GW campus, putting local agricultural wells at risk.
-- xAI installing unregistered methane gas turbines in Memphis, TN to bypass environmental permits, pushing industrial pollution into local residential neighborhoods.
-        </textarea>
-      </section>
-
-      <!-- Principle 6 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #6: Consider Context
-
-Consider context means to consider the background behind why a number is there and what might have affected it before deciding what it must mean.
-
-**How it applies:** This applies to our dataset because “Annualized Revenue” does not provide a full look into whether AI is profitable. Considering the context behind how much money has been invested, staff count, etc. is crucial.
-
-**Example:** OpenAI estimated $5.5 billion Annualized Revenue on Dec. 31, 2024, and it’s total compute spend in 2024 was around $5.8 billion. Annualized revenue is just the expected revenue over the next 12 months, not how much it made that year, so that compute spend can’t just be subtracted from the annualized revenue. Additionally, compute spend doesn’t include all additional costs to subtract from revenue, such as facilities, salaries, etc.
-        </textarea>
-      </section>
-
-      <!-- Principle 7 -->
-      <section data-markdown>
-        <textarea data-template>
-# Principle #7: Make Labor Visible
-
-Make labor visible means to make the hands that labored on the data visible.
-
-**How it applies:** The Epoch AI dataset’s staff count estimates are based on looking for a count of full-time, permanent staff. It specifies that it is not looking for a count of part-time data contractors in it’s total staff count. As the principle states, they are some of the hands that labored on the data, where the labor should be visible such that they’re included in a claim of “total staff count”.
-
-**Example:** The Epoch AI “Staff Count” of 6,000 on Aug. 6, 2025 for Google in the Full AI division does not reflect it’s actual full staff, it was not looking for the part-time contractors who have hands on the data when finding that count.
-        </textarea>
-      </section>
-
-      <!-- Gen AI Comparison -->
-      <section data-markdown>
-        <textarea data-template>
-# Gen AI Comparison
-
-After we wrote and ported all the slides, we had a custom AI framework go through as a red team "grader" to poke holes in all of our slides. 
-
-Our main model runner used Gemini 3.8 flash with high reasoning. Additionally, we used Hermes and Jav for a more deterministic approach while having GSD and a custom swarm skill to scrape the internet for fact checking. The agent swarm talked via a shared thread and saved contexts via sql lite database. 
-
-**Findings:** 
-- **Empirical Grounding vs. Platitudes**: The AI red team flagged our initial drafts for lacking citations on Allbirds' 875% surge and Microsoft's 5,500 layoffs, which we verified against SEC filings. When tasked with analyzing the dataset through Data Feminism on its own, commercial Gen AI defaulted to abstract corporate ethics slogans without balance-sheet grounding.
-- **Accounting Literacy Failure**: Commercial AI conflated Annualized Run Rate (ARR) with net profit, failing to recognize that OpenAI's $5.8B compute burn wiped out its $5.5B ARR, and ignoring recurring 3-year GPU depreciation cycles.
-- **Physical Utility & Labor Erasure**: The AI model framed "pluralism" only as token diversity in training text, missing municipal water extraction (Yukon 2.5 MGD) and erasing the 50,000+ outsourced RLHF annotators who align the models.
-        </textarea>
-      </section>
-
-    </div>
+    <footer>
+      <p>Hosted on GitHub Pages via <a href="https://github.com/Core310/Uni-slides">Core310/Uni-slides</a></p>
+    </footer>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
-
-  <script>
-    Reveal.initialize({
-      width: 1400,
-      height: 850,
-      margin: 0.08,
-      minScale: 0.2,
-      maxScale: 1.0,
-
-      // Parallax background image (City pixel art, dimmed 20%)
-      parallaxBackgroundImage: 'city-parallax.png',
-      parallaxBackgroundSize: '2304px 1296px',
-      parallaxBackgroundHorizontal: 200,
-      parallaxBackgroundVertical: 50,
-
-      center: false,
-      controls: true,
-      progress: true,
-      slideNumber: true,
-      hash: true,
-      history: true,
-
-      plugins: [ RevealMarkdown ]
-    });
-  </script>
 </body>
 </html>

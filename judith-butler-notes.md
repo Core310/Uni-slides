@@ -18,7 +18,7 @@
 ## Slide 2: Opening the Text: Affirming "Queer"
 - **The Urgent Question**: Our story starts in the early 1990s with an urgent question: what does it mean when an oppressed group takes the very slur used to assault them and hoists it as an honorable banner?
 - **The Historical Crisis**: Picture New York in 1993: thousands of gay men, trans women, and people of color are dying of AIDS, while the federal government and medical establishment meet them with silence, neglect, and moral condemnation.
-- **Militant Direct Action**: Activist coalitions like ACT UP and Queer Nation realized polite lobbying was getting them killed. They took over avenues, held die-ins in traffic, and weaponized the word "queer" to shock the public out of complacency.
+- **Militant Direct Action**: If you haven't heard of ACT UP or Queer Nation, think of the Civil Rights Movement. Just like 1960s civil rights activists realized polite requests were not stopping segregation, AIDS activists realized polite lobbying was getting them killed. They adopted the sit-in playbook, staging mass die-ins in rush-hour traffic to make an invisible crisis impossible to ignore.
 - **The Strategic Paradox**: Butler asks the crucial question: how do you rally around a reclaimed word for collective survival without turning it into a new, rigid club that ends up policing its own people?
 
 ---
@@ -51,7 +51,7 @@
 
 ## Slide 6: Discursive Resignification: Inverting the Slur
 - **The Wound of the Name**: Now we see how this applies to injurious slurs: when someone hurls a slur on the street, the pain does not come from the sound of the word, but because the word cites centuries of state violence, police raids, and physical abuse.
-- **The Mechanics of Resignification**: Because words rely on repetition and have no permanent master, targeted communities can seize the injurious term and cite it in an unauthorized, defiant setting.
+- **The Mechanics of Resignification**: This connects directly to Black liberation movements and historical struggles: when dominant power hurls an insulting term at an oppressed group, words rely on repetition and have no permanent master. The targeted group can seize that exact word, pull it out of the attacker's hands, and repeat it in an unauthorized, defiant setting to invert its power.
 - **Turning Trauma into Coalition**: That is what ACT UP and Queer Nation did: by chanting "We're here, we're queer," they pulled the word out of homophobic street beatings and transformed it into a battle cry of collective defense.
 - **A Permanent Paradox**: Butler emphasizes a permanent paradox: resignification does not erase the trauma of the word. Its radical power and shock value exist precisely because the ghost of historical violence still haunts it.
 

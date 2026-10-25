@@ -17,17 +17,111 @@ format:
     margin: 0.08
 ---
 
+## Presentation Roadmap
+
+### Overview of Talking Topics
+
+::: {.roadmap-container}
+::: {.roadmap-card}
+[01]{.roadmap-num}
+::: {.roadmap-content}
+#### Historical Background
+ACT UP direct action, AIDS crisis neglect, and seizing "queer" off the street
+:::
+:::
+::: {.roadmap-card}
+[02]{.roadmap-num}
+::: {.roadmap-content}
+#### Clearing the Myth: Performance vs. Performativity
+Differentiating voluntary theatrical stage choice from compulsory disciplinary training
+:::
+:::
+::: {.roadmap-card}
+[03]{.roadmap-num}
+::: {.roadmap-content}
+#### The Linguistic Engine: Austin & "Girling"
+How performative speech acts alter reality and interpellate infants from birth
+:::
+:::
+::: {.roadmap-card}
+[04]{.roadmap-num}
+::: {.roadmap-content}
+#### Citationality: The Fragility of the Script
+Words borrowing authority from historical precedent, and why daily repetition glitches
+:::
+:::
+::: {.roadmap-card}
+[05]{.roadmap-num}
+::: {.roadmap-content}
+#### Discursive Resignification: Inverting the Slur
+Subverting injurious language into collective solidarity without erasing historical trauma
+:::
+:::
+::: {.roadmap-card}
+[06]{.roadmap-num}
+::: {.roadmap-content}
+#### Heterosexual Melancholia & Disavowed Loss
+Psychoanalytic cost of compulsory heterosexuality and the unmourned grief within the norm
+:::
+:::
+::: {.roadmap-card}
+[07]{.roadmap-num}
+::: {.roadmap-content}
+#### The Politics of Mourning & Ungrievable AIDS Lives
+State dehumanization of queer deaths and activist militancy with political funerals
+:::
+:::
+::: {.roadmap-card}
+[08]{.roadmap-num}
+::: {.roadmap-content}
+#### Butler's Warning: Keeping "Queer" Contested
+Preventing radical vocabulary from hardening into elite gatekeeping and assimilation
+:::
+:::
+::: {.roadmap-card}
+[09]{.roadmap-num}
+::: {.roadmap-content}
+#### Course Connection: Paris is Burning & "Realness"
+Harlem ballroom culture, executive realness, parody of wealth, and physical street survival
+:::
+:::
+::: {.roadmap-card}
+[10]{.roadmap-num}
+::: {.roadmap-content}
+#### Who Was Left Out: The Limits of Early Queer Theory
+Theoretical blindspots: transgender medical bodies, racialized violence, and global borders
+:::
+:::
+::: {.roadmap-card}
+[11]{.roadmap-num}
+::: {.roadmap-content}
+#### Three Class Discussion Questions
+Interactive student prompts on campus routine, slur reclamation limits, and ball subversion
+:::
+:::
+:::
+
+::: {.notes}
+- **Trajectory**: To guide our discussion today, our presentation follows an intentional narrative arc divided into three major movements.
+- **Foundations**: First, we examine the political urgency of the 1990s AIDS epidemic and dismantle the persistent myth that Butler views gender as voluntary theater, establishing how linguistic interpellation and citationality function.
+- **Psychic**: Second, we delve into the emotional and psychic mechanics of gender: how slurs are resignified, how heterosexual identity is forged through unmourned grief, and how ACT UP converted ungrievable AIDS deaths into militant political funerals.
+- **Applications**: Third, we connect Butler's theory directly to our syllabus documentary "Paris is Burning", assess critical blindspots raised by trans theorists and scholars of color, and open the floor to three discussion questions.
+- **Bridge**: Let us begin with the historical crisis that sparked Butler's text: New York City during the peak of the AIDS epidemic.
+:::
+
+---
+
 ## Opening the Text: Affirming "Queer"
 
-- **Question**: Judith Butler poses a hard dilemma in the early $1990$s that is resurfacing today
+- **Question**: Judith Butler poses a hard dilemma in the early 1990s that is resurfacing today
 - **Crisis**: Thousands dying of AIDS while the state responds with silence and neglect
 - **Resistance**: Activists borrow the Civil Rights playbook of die-ins to force national attention
 - **Reclamation**: Seizing the slur "queer" off the street to build a defiant collective banner
 
 ::: {.notes}
-- **Question**: Judith Butler's story starts out in the early $1990$s posing a hard question at that time, and it is a topic resurfacing right now in our own politics: what does it mean when an oppressed group takes the very slur used to assault them, hoists it as an honorable banner, and demands collective power?
-- **Crisis**: To understand that dilemma, we have to look at the world Butler was writing in: New York in the early $1990$s during the peak of the AIDS epidemic, where thousands of gay men, trans women, and people of color were dying while the federal government and medical establishment looked away with silence and neglect.
-- **Resistance**: Activists realized polite lobbying was getting them killed, so groups like ACT UP borrowed the playbook of the $1960$s Civil Rights Movement. Just like civil rights workers used lunch counter sit-ins to halt business as usual, AIDS activists staged mass die-ins in rush-hour traffic to make an invisible emergency impossible to ignore.
+- **Question**: Judith Butler's story starts out in the early 1990s posing a hard question at that time, and it is a topic resurfacing right now in our own politics: what does it mean when an oppressed group takes the very slur used to assault them, hoists it as an honorable banner, and demands collective power?
+- **Crisis**: To understand that dilemma, we have to look at the world Butler was writing in: New York in the early 1990s during the peak of the AIDS epidemic, where thousands of gay men, trans women, and people of color were dying while the federal government and medical establishment looked away with silence and neglect.
+- **Resistance**: Activists realized polite lobbying was getting them killed, so groups like ACT UP borrowed the playbook of the 1960s Civil Rights Movement. Just like civil rights workers used lunch counter sit-ins to halt business as usual, AIDS activists staged mass die-ins in rush-hour traffic to make an invisible emergency impossible to ignore.
 - **Reclamation**: At the same time, activists did something shocking: instead of running away from the slur "queer", they seized that exact hateful insult off the street, put it on placards, and chanted it in marches as a collective shield.
 - **Bridge**: But Butler looks at this activist victory and asks a deep philosophical question: how can speaking a hateful word actually dismantle its violence? To answer that, Butler first has to clear away a huge misunderstanding about how gender works.
 :::
@@ -82,7 +176,7 @@ format:
 
 ::: {.notes}
 - **Quote**: Look at the quote on screen: repeating the script is what allows society to recognize you as a human subject in the first place.
-- **Authority**: In Slide $4$, we saw a doctor announce "It is a girl!" But where does that authority come from? Butler explains that speech acts do not hold magical power on their own. A doctor or judge has authority only because they are quoting centuries of legal and cultural precedent. Butler borrows this insight from philosopher Jacques Derrida: words function like legal citations, borrowing authority from the past.
+- **Authority**: In the previous slide on the linguistic engine, we saw a doctor announce "It is a girl!" But where does that authority come from? Butler explains that speech acts do not hold magical power on their own. A doctor or judge has authority only because they are quoting centuries of legal and cultural precedent. Butler borrows this insight from philosopher Jacques Derrida: words function like legal citations, borrowing authority from the past.
 - **Illusion**: Because society has been quoting this script for thousands of years, we make a huge mistake: we assume masculinity and femininity reflect biological nature. Butler says there is no natural original. What we call nature is simply the illusion produced by endlessly citing historical precedent.
 - **Repetition**: None of us invented manhood or womanhood. To survive socially and be recognized as human beings, we are coerced into citing these pre-existing scripts every single day. You do not just recite gender once at birth; you must rehearse it every morning in your voice, clothing, and gestures.
 - **Glitches**: Here is the dramatic turning point in Butler's story: because the script relies on fallible human beings repeating it every day, it is inherently fragile. Human repetition can never be exact. Every single citation risks slipping, failing, or glitching. And when the script glitches, the artificiality of the norm is exposed to the world.
@@ -123,7 +217,7 @@ format:
 - **Melancholia**: Butler draws on Freud's distinction between mourning and melancholia. In healthy mourning, you acknowledge a loss and grieve it openly. But melancholia happens when grief is forbidden. To become a "proper" straight man, a boy must renounce loving attachments to other boys, but society strictly forbids him from crying over that loss.
 - **Internalization**: Because the loss cannot be spoken or mourned, it gets buried deep inside the ego. The straight man becomes the man he cannot love: he incorporates that masculine ideal into his own body, turning straight identity into an internal graveyard of unmourned queer attachments.
 - **Panic**: This psychoanalytic insight explains why heteronormative culture reacts with such panic and rage toward queer visibility: seeing open queer love threatens to unearth the unresolved grief upon which straight identity was constructed.
-- **Bridge**: And this buried grief is not just a personal therapy issue: during the $1980$s and $1990$s, this exact refusal to grieve exploded into a national political tragedy during the AIDS epidemic.
+- **Bridge**: And this buried grief is not just a personal therapy issue: during the 1980s and 1990s, this exact refusal to grieve exploded into a national political tragedy during the AIDS epidemic.
 :::
 
 ---
@@ -176,7 +270,7 @@ format:
 
 ::: {.notes}
 - **Quote**: Look at bell hooks' incisive critique on screen: at the drag balls, the white corporate executive is not mocked; he is worshipped as the supreme fantasy of power and safety.
-- **Ballroom**: In our syllabus film "Paris is Burning", Black and Latino queer and trans communities in $1980$s Harlem gathered in balls to compete in categories like "Executive Realness", "Town and Country", and "Military".
+- **Ballroom**: In our syllabus film "Paris is Burning", Black and Latino queer and trans communities in 1980s Harlem gathered in balls to compete in categories like "Executive Realness", "Town and Country", and "Military".
 - **Parody**: Butler points out that when a poor queer youth of color walks a runway and passes flawlessly as a Wall Street executive, it exposes the truth about power: the actual Wall Street executive is also just performing a costume with no natural original.
 - **Survival**: But realness was never just a fun game: on the streets outside the ballroom, for poor trans women of color like Venus Xtravaganza, achieving realness was the only shield against street harassment, police brutality, and murder.
 - **Ambivalence**: Connecting Butler with bell hooks reveals a deep contradiction: when ball participants compete to imitate white wealth and corporate prestige, are they subverting the system by showing anyone can perform it, or are they re-affirming that elite white wealth is the only thing that guarantees physical safety?

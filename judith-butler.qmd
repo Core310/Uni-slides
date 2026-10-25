@@ -96,7 +96,7 @@ Theoretical blindspots: transgender medical bodies, racialized violence, and glo
 [11]{.roadmap-num}
 ::: {.roadmap-content}
 #### Three Class Discussion Questions
-Interactive student prompts on campus routine, slur reclamation limits, and ball subversion
+Contemporary debates on racialized surveillance, the #MeToo movement, and modern state bans
 :::
 :::
 :::
@@ -301,14 +301,14 @@ Interactive student prompts on campus routine, slur reclamation limits, and ball
 
 ## Three Class Discussion Questions
 
-- **Discipline**: Where in campus life or sports do you see gender enforced through routine?
-- **Reclamation**: Can every slur be reclaimed, or does past violence leave a permanent wound?
-- **Hierarchy**: In "Paris is Burning", does copying elite wealth subvert power or worship it?
+- **Intersectionality**: How does the racialized policing of sexuality expose the limits of Butler's linguistic model?
+- **Resignification**: How did the Me Too movement deploy performative speech acts to shatter institutional scripts?
+- **Sovereignty**: How do contemporary state bans replicate the 1990s AIDS crisis playbook of ungrievable lives?
 
 ::: {.notes}
-- **Discipline**: Where in university life, Greek life, athletics, or family traditions do you experience gender enforced through compulsory disciplinary routine rather than free personal choice?
-- **Reclamation**: Can every injurious slur be reclaimed and stripped of its harm, or does the history of physical violence behind certain words leave an indelible wound that cannot be undone?
-- **Hierarchy**: In "Paris is Burning", ball contestants achieve realness by copying corporate, military, and wealthy white aesthetics. Does achieving realness subvert dominant hierarchies, or does it reinforce elite wealth and cisnormativity as the only standard of survival?
+- **Intersectionality**: Butler argues that heteronormativity produces queer lives as ungrievable. Yet scholars of women of color feminism, such as Frances Beal and bell hooks, demonstrate that the state never polices sexuality in a racial vacuum: Black, Latina, and indigenous sexualities have historically been hyper-surveilled, pathologized, and violently coerced by the state. In "Paris is Burning", Venus Xtravaganza and other trans women of color faced lethal danger not simply because their gender performance glitched, but because their racial and economic vulnerability stripped them of physical sanctuary. When we analyze modern state surveillance and hate crimes today, does Butler's focus on linguistic citation risk obscuring how white supremacy and racial capitalism determine which bodies are granted physical protection and which are deemed disposable?
+- **Resignification**: For decades, workplace sexual harassment was sustained through compulsory silence, non-disclosure agreements, and cultural scripts that normalized male entitlement as inevitable. The Me Too movement operated as a massive performative rupture: by publicly naming systemic abuse, millions of survivors seized speech to break the historical citation of silence, demonstrating Butler's thesis that dominant power is fragile when its script is interrupted. However, Butler warns that seeking justice through punitive criminal legal apparatuses often expands state carceral power over marginalized groups. Looking at the trajectory of Me Too today, did viral public naming permanently dismantle institutional gender hierarchies, or has power adapted by assimilating the discourse into corporate compliance while leaving low-wage and marginalized women vulnerable?
+- **Sovereignty**: In Slide 9, Butler documented how the 1990s federal government managed the AIDS epidemic through deliberate silence, medical neglect, and treating queer deaths as disposable and ungrievable. Today, we witness state legislatures across the country passing bans on gender-affirming medical care, criminalizing reproductive healthcare, and restricting classroom speech about LGBTQ lives. How are modern governments deploying the exact same biopolitical playbook Butler analyzed—using authoritative legal interpellation to declare which bodies are legally recognized and which are denied bodily sovereignty? And what direct action strategies from ACT UP, such as civil disobedience and mutual aid, are required to resist modern state abandonment?
 :::
 
 ---

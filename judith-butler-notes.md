@@ -1,114 +1,125 @@
 # Presentation Notes: Judith Butler, "Critically Queer"
 
-- **Course**: WGS 3563: Gender and Global Politics (Dr. Hadas Cohen)
+- **Course**: WGS $3563$: Gender and Global Politics (Dr. Hadas Cohen)
 - **Presenter**: Arika Khor
-- **Date**: Friday, October 23, 2026
-- **Assigned Reading**: Judith Butler, "Critically Queer," Chapter 8 in Bodies That Matter: On the Discursive Limits of "Sex"
-- **Slide Deck**: `https://somethingsomething.fyi/Uni-slides/judith-butler.html` (Press `S` on the keyboard during the presentation to open the speaker notes window)
+- **Date**: Friday, October $23$, $2026$
+- **Reading**: Judith Butler, "Critically Queer," Chapter $8$ in Bodies That Matter: On the Discursive Limits of "Sex"
+- **Deck**: https://somethingsomething.fyi/Uni-slides/judith-butler.html (Press S on the keyboard during the presentation to open the speaker notes window)
 
 ---
 
-## Slide 1: Title Slide — Judith Butler: "Critically Queer"
-- **Title & Chapter**: Today we are diving into Judith Butler's essay "Critically Queer", the final chapter of "Bodies That Matter".
-- **Core Thesis**: We are approaching this like a story with real life-or-death stakes: how language shapes us into men and women, the hidden grief running through society, and how an oppressed community fought back by turning a violent slur into a weapon.
-- **Presentation Roadmap**: Here is our narrative arc: the AIDS crisis that sparked this text, the myth of gender as a costume, the linguistic machinery that assigns our roles, the unmourned grief of heterosexuality, our course film "Paris is Burning", and who got left behind in early queer theory.
+## Slide $1$: Title Slide — Judith Butler: "Critically Queer"
+- **Welcome**: Today we are diving into Judith Butler's essay "Critically Queer", the final chapter of "Bodies That Matter".
+- **Story**: We are approaching this not as abstract academic theory, but as a story with urgent real-world stakes: how language shapes us into men and women, the hidden grief running through society, and how an oppressed community fought back by turning a violent slur into an engine of survival.
+- **Roadmap**: Here is our narrative journey today: the AIDS crisis that sparked this text, the myth of gender as a costume, the linguistic machine that assigns our roles, the unmourned grief of heterosexuality, our syllabus film "Paris is Burning", and who was left behind in early queer theory.
+- **Bridge**: To understand why Butler wrote this essay with such urgency, we have to start where she started: in a moment of literal life and death.
 
 ---
 
-## Slide 2: Opening the Text: Affirming "Queer"
-- **The Urgent Question**: Our story starts in the early 1990s with an urgent question: what does it mean when an oppressed group takes the very slur used to assault them and hoists it as an honorable banner?
-- **The Historical Crisis**: Picture New York in 1993: thousands of gay men, trans women, and people of color are dying of AIDS, while the federal government and medical establishment meet them with silence, neglect, and moral condemnation.
-- **Militant Direct Action**: If you haven't heard of ACT UP or Queer Nation, think of the Civil Rights Movement. Just like 1960s civil rights activists realized polite requests were not stopping segregation, AIDS activists realized polite lobbying was getting them killed. They adopted the sit-in playbook, staging mass die-ins in rush-hour traffic to make an invisible crisis impossible to ignore.
-- **The Strategic Paradox**: Butler asks the crucial question: how do you rally around a reclaimed word for collective survival without turning it into a new, rigid club that ends up policing its own people?
+## Slide $2$: Historical Background: The Crisis That Sparked the Text
+- **Question**: Judith Butler's story starts out in the early $1990$s posing a hard question at that time, and it is a topic resurfacing right now in our own politics: what does it mean when an oppressed group takes the very slur used to assault them, hoists it as an honorable banner, and demands collective power?
+- **Crisis**: To understand that dilemma, we have to look at the world Butler was writing in: New York in the early $1990$s during the peak of the AIDS epidemic, where thousands of gay men, trans women, and people of color were dying while the federal government and medical establishment looked away with silence and neglect.
+- **Resistance**: Activists realized polite lobbying was getting them killed, so groups like ACT UP borrowed the playbook of the $1960$s Civil Rights Movement. Just like civil rights workers used lunch counter sit-ins to halt business as usual, AIDS activists staged mass die-ins in rush-hour traffic to make an invisible emergency impossible to ignore.
+- **Reclamation**: At the same time, activists did something shocking: instead of running away from the slur "queer", they seized that exact hateful insult off the street, put it on placards, and chanted it in marches as a collective shield.
+- **Bridge**: But Butler looks at this activist victory and asks a deep philosophical question: how can speaking a hateful word actually dismantle its violence? To answer that, Butler first has to clear away a huge misunderstanding about how gender works.
 
 ---
 
-## Slide 3: Clearing the Myth: Performance vs. Performativity
-- **The Misreading of Gender Trouble**: Three years before this chapter, Butler published "Gender Trouble", and readers celebrated it because they misunderstood it completely. People thought Butler was saying: gender is just a fun theatrical costume you pick out of your closet each morning.
-- **Butler's Correction in Bodies That Matter**: Butler wrote "Bodies That Matter" specifically to push back against this idea. Butler states plainly: performativity is neither free play nor theatrical self-presentation.
-- **Performance**: A performance is a voluntary, conscious act put on by an already-existing person who decides to step onto a stage.
-- **Performativity**: Performativity is the exact opposite: it is the compulsory disciplinary training forced on us by law, medicine, and family through which society produces us as subjects in the first place. You do not do gender; gender does you.
+## Slide $3$: Clearing the Myth: Performance vs. Performativity
+- **Misunderstanding**: Three years before this essay, Butler published "Gender Trouble", and it became a worldwide sensation partly because people misunderstood it completely. Readers thought Butler was saying: gender is just a fun theatrical costume you pick out of your closet each morning.
+- **Correction**: Butler wrote this chapter in "Bodies That Matter" specifically to shut down that myth. Butler insists plainly: performativity is neither free play nor voluntary theater.
+- **Performance**: A performance is a conscious, voluntary choice made by an already existing person who decides to step onto a stage and play a character.
+- **Performativity**: Performativity is the exact opposite: it is compulsory disciplinary training enforced by law, medicine, schools, and families. You do not wake up and choose your gender; society forces you into gender before you even have a voice. You do not do gender; gender does you.
+- **Bridge**: So how exactly does society "do" gender to us? What is the actual linguistic machine that assigns our identities from the day we are born?
 
 ---
 
-## Slide 4: The Linguistic Engine: J.L. Austin & "Girling"
-- **Quote ("In that naming, the girl is 'girled'")**: Look at the quote on screen: the moment a baby is named, she is pulled into language and kinship through gendered discipline.
-- **J.L. Austin**: Butler borrows the machinery of performativity from philosopher J.L. Austin, who observed that language does not just describe the world; certain words actually make things happen.
-- **Descriptive vs. Performative**: Descriptive language describes pre-existing facts; performative utterances create a social reality, like a judge declaring "I sentence you" or an officiant saying "I pronounce you married".
-- **The Medical Interpellation**: Think of the delivery room: when a doctor holds up a newborn and announces "It is a girl!", that is not an innocent observation; it is an authoritative command.
-- **"Girling" as Compulsion**: That announcement launches a lifelong pipeline of "girling": a sequence of expectations, dress codes, medical checkups, and social rules that constantly discipline the child into womanhood.
+## Slide $4$: The Linguistic Engine: Austin & "Girling"
+- **Quote**: Look at the quote on screen: the moment a baby is named, she is pulled into language and kinship through gendered discipline.
+- **Austin**: Butler borrows the machinery of performativity from philosopher J.L. Austin, who observed that language does not just describe facts; certain words actually perform actions and make things happen.
+- **Utterance**: Think of performative speech acts in daily life: when a judge says "I sentence you to prison", or an officiant says "I pronounce you married", those words do not report on reality—they alter reality on the spot.
+- **Interpellation**: Butler points directly to the delivery room: when a doctor holds up a newborn and announces "It is a girl!", that is not an innocent biological observation. It is an authoritative social command.
+- **Pipeline**: That single announcement launches a lifelong pipeline of what Butler calls "girling": an endless sequence of dress codes, behavioral expectations, and social policing that constantly pressures the child to fit the mold of womanhood.
+- **Bridge**: But Butler stops here and asks a crucial question: where did that doctor get the authority to assign our lives in the first place? The doctor is not God, and the doctor did not invent girlhood. That brings us to our next slide.
 
 ---
 
-## Slide 5: Derrida & Citationality: Fragility of the Script
-- **Quote ("This repetition is not performed by a subject")**: As the quote highlights, repeating the script is what allows society to recognize you as a human subject in the first place.
-- **Jacques Derrida's Iterability**: Butler brings in Jacques Derrida to explain why speech acts have power: a judge's decree works only because it cites an established history of law.
-- **No Natural Original**: This means masculinity and femininity carry weight not because they reflect biological nature, but because they continually cite established historical precedent. There is no natural original.
-- **Compulsory Repetition**: None of us invented manhood or womanhood; we are coerced into citing pre-existing historical scripts every single day just to survive socially.
-- **The Structural Glitch**: Here is the plot twist and the hope in Butler's theory: because gender must be repeated every day, it is fragile. No repetition is ever identical; every citation risks slippage, failure, exaggeration, or subversion that exposes the artificiality of the norm.
+## Slide $5$: Citationality: The Fragility of the Script
+- **Quote**: Look at the quote on screen: repeating the script is what allows society to recognize you as a human subject in the first place.
+- **Authority**: In Slide $4$, we saw a doctor announce "It is a girl!" But where does that authority come from? Butler explains that speech acts do not hold magical power on their own. A doctor or judge has authority only because they are quoting centuries of legal and cultural precedent. Butler borrows this insight from philosopher Jacques Derrida: words function like legal citations, borrowing authority from the past.
+- **Illusion**: Because society has been quoting this script for thousands of years, we make a huge mistake: we assume masculinity and femininity reflect biological nature. Butler says there is no natural original. What we call nature is simply the illusion produced by endlessly citing historical precedent.
+- **Repetition**: None of us invented manhood or womanhood. To survive socially and be recognized as human beings, we are coerced into citing these pre-existing scripts every single day. You do not just recite gender once at birth; you must rehearse it every morning in your voice, clothing, and gestures.
+- **Glitches**: Here is the dramatic turning point in Butler's story: because the script relies on fallible human beings repeating it every day, it is inherently fragile. Human repetition can never be exact. Every single citation risks slipping, failing, or glitching. And when the script glitches, the artificiality of the norm is exposed to the world.
+- **Bridge**: And that crack in the script leads directly into our next question: when the script glitches, how do oppressed communities fight back? By seizing those very words and quoting them back at power.
 
 ---
 
-## Slide 6: Discursive Resignification: Inverting the Slur
-- **The Wound of the Name**: Now we see how this applies to injurious slurs: when someone hurls a slur on the street, the pain does not come from the sound of the word, but because the word cites centuries of state violence, police raids, and physical abuse.
-- **The Mechanics of Resignification**: This connects directly to Black liberation movements and historical struggles: when dominant power hurls an insulting term at an oppressed group, words rely on repetition and have no permanent master. The targeted group can seize that exact word, pull it out of the attacker's hands, and repeat it in an unauthorized, defiant setting to invert its power.
-- **Turning Trauma into Coalition**: That is what ACT UP and Queer Nation did: by chanting "We're here, we're queer," they pulled the word out of homophobic street beatings and transformed it into a battle cry of collective defense.
-- **A Permanent Paradox**: Butler emphasizes a permanent paradox: resignification does not erase the trauma of the word. Its radical power and shock value exist precisely because the ghost of historical violence still haunts it.
+## Slide $6$: Discursive Resignification: Inverting the Slur
+- **Wound**: Now we see how this machinery of language applies to street violence: when a bigot hurls a slur, the pain does not come from the sound of the word, but because the word is citing centuries of police raids, physical abuse, and state-sanctioned violence.
+- **Inversion**: But remember what we learned on the last slide: words only work through repetition, and words have no permanent owner. Just like in the Black liberation struggle and civil rights movements where oppressed communities seized insulting labels, queer activists realized the attacker does not own the word. An oppressed group can grab that exact word, pull it out of the attacker's hands, and repeat it in a defiant, unauthorized context.
+- **Solidarity**: That is what ACT UP and Queer Nation did: by chanting "We're here, we're queer, get used to it", they pulled the word out of homophobic beatings and turned it into an umbrella of collective solidarity and self-defense.
+- **Paradox**: But Butler highlights a permanent paradox: resignifying a slur does not magically erase its trauma. Its political shock value and radical power exist precisely because the ghost of historical violence still haunts the word.
+- **Bridge**: Up to this point, we have looked at how language attacks queer people on the street. But Butler argues that compulsory gender does not just harm queer people—it also inflicts a hidden psychological wound on ordinary straight people.
 
 ---
 
-## Slide 7: Heterosexual Melancholia & Disavowed Loss
-- **Quote ("The straight man becomes the man he cannot love")**: Look at Butler's striking insight on screen: straight masculinity and femininity are forged by internalizing the very same-sex love one was forbidden to express.
-- **The Heterosexual Matrix**: Butler turns to psychoanalysis to ask: what does it cost a person to become conventionally straight? Heterosexuality is enforced through the strict prohibition of same-sex love.
-- **Disavowed Grief**: Applying Freud's distinction between mourning and melancholia: healthy mourning lets you grieve a loss, but melancholia happens when grief is forbidden. To become a straight man, a boy must renounce loving attachments to other men, but society forbids him from crying over that loss.
-- **Social Melancholia**: Because the loss cannot be acknowledged, it gets buried inside the ego, turning straight identity into an internal graveyard of unmourned queer attachments.
-- **The Psychoanalytic Cost**: This explains why heteronormative culture reacts with such panic and hostility toward queer visibility: it threatens to unearth the unresolved grief that heterosexuality is built upon.
+## Slide $7$: Heterosexual Melancholia & Disavowed Loss
+- **Quote**: Look at Butler's striking insight on screen: straight masculinity and femininity are forged by internalizing the very same-sex love one was forbidden to express.
+- **Cost**: Butler turns to psychoanalysis to ask a startling question: what does it cost someone emotionally to become conventionally straight? Heterosexuality is not natural; it is enforced by forbidding and punishing same-sex love from early childhood.
+- **Melancholia**: Butler draws on Freud's distinction between mourning and melancholia. In healthy mourning, you acknowledge a loss and grieve it openly. But melancholia happens when grief is forbidden. To become a "proper" straight man, a boy must renounce loving attachments to other boys, but society strictly forbids him from crying over that loss.
+- **Internalization**: Because the loss cannot be spoken or mourned, it gets buried deep inside the ego. The straight man becomes the man he cannot love: he incorporates that masculine ideal into his own body, turning straight identity into an internal graveyard of unmourned queer attachments.
+- **Panic**: This psychoanalytic insight explains why heteronormative culture reacts with such panic and rage toward queer visibility: seeing open queer love threatens to unearth the unresolved grief upon which straight identity was constructed.
+- **Bridge**: And this buried grief is not just a personal therapy issue: during the $1980$s and $1990$s, this exact refusal to grieve exploded into a national political tragedy during the AIDS epidemic.
 
 ---
 
-## Slide 8: The Politics of Mourning & Ungrievable AIDS Lives
-- **The AIDS Crisis Grounding**: Butler moves this psychoanalytic theory of melancholia directly into the literal tragedy of the AIDS epidemic.
-- **Ungrievable Lives**: American politics and media culture treated the deaths of gay men, trans women, and drug users as "ungrievable"—losses that were ignored or framed as deserved.
-- **Dehumanization via Silence**: Butler argues that refusing to mourn a life is the ultimate form of dehumanization: if a community's deaths cannot be publicly grieved, the state never recognized them as real human beings.
-- **Militant Mourning as Resistance**: Activists refused to grieve quietly: ACT UP brought funerals into traffic and scattered the actual ashes of loved ones across the White House lawn, forcing the nation to confront the grief it tried to bury.
+## Slide $8$: The Politics of Mourning & Ungrievable AIDS Lives
+- **Epidemic**: Butler takes this psychoanalytic concept of melancholia and grounds it directly in the literal tragedy of the AIDS epidemic.
+- **Ungrievable**: American politics and media culture treated the deaths of gay men, trans women, and drug users as "ungrievable"—losses that were either ignored or framed as self-inflicted punishment.
+- **Dehumanization**: Butler argues that refusing to mourn a community is the ultimate form of dehumanization: if the nation refuses to grieve your death, it means the state never recognized you as a real human being while you were alive.
+- **Militancy**: Queer activists refused to grieve silently in private shame. ACT UP organized militant political funerals, carrying open coffins through rush-hour traffic and scattering the actual cremated ashes of loved ones across the White House lawn, forcing a callous nation to look at the bodies it tried to ignore.
+- **Bridge**: Through militant mourning and direct action, queer activists forced the country to pay attention and made "queer" a proud, defiant political identity. But having achieved that victory, Butler closes her essay with an urgent warning about what happens next.
 
 ---
 
-## Slide 9: Butler's Warning: Keeping "Queer" Contested
-- **Quote ("If the term 'queer' is to remain a site of contestation")**: Butler closes with this warning: the radical promise of queer politics dies the moment it becomes the property of an elite.
-- **Against Gatekeeping**: "Queer" must never harden into an exclusive membership card, a corporate brand, or a bureaucratic checklist of who qualifies and who is excluded.
-- **The Anti-Normative Edge**: The moment an oppositional identity achieves respectable mainstream status, it starts policing its own borders and creating new outcasts.
-- **A Site of Permanent Contestation**: To stay alive, the word must remain vulnerable, unfinished, and open to continuous challenge from those pushed to the margins.
-- **Core Conclusion**: Language is both the cage that disciplines our bodies and the lever we can use to disrupt power.
+## Slide $9$: Butler's Warning: Keeping "Queer" Contested
+- **Quote**: Look at Butler's warning on screen: the radical promise of queer politics dies the moment it becomes the private property of an elite.
+- **Gatekeeping**: Butler warns that "queer" must never harden into an exclusive membership card, a corporate brand, or a rigid checklist of who qualifies and who is excluded.
+- **Assimilation**: History shows that the moment an oppositional movement achieves mainstream respectability, it begins assimilating into dominant power and policing its own borders, creating a brand new class of outcasts.
+- **Contestation**: To remain a liberating force, the word "queer" must remain permanently unfinished, vulnerable, and open to continuous challenge from whoever is pushed to the margins next.
+- **Lever**: That is Butler's grand theoretical conclusion: language is both the cage that disciplines our bodies and the lever we can use to break power open.
+- **Bridge**: To see how this battle over scripts, survival, and performance actually played out in real life, we can connect Butler's theory directly to our syllabus documentary: "Paris is Burning".
 
 ---
 
-## Slide 10: Course Connection: Paris is Burning & "Realness"
-- **Quote (bell hooks on the white corporate executive)**: Look at bell hooks' critique on screen: at the balls, the white corporate executive is not mocked; he is worshipped as the supreme fantasy of power and safety.
-- **Harlem Drag Ball Culture**: In our syllabus film "Paris is Burning", Black and Latino queer and trans communities competed in balls in categories like "Executive Realness", "Town and Country", and "Military".
-- **The Illusion of the Original**: Butler points out that when a poor person of color walks a runway and passes perfectly as a Wall Street executive, it proves the actual Wall Street executive is also just performing a costume with no natural original.
-- **Realness as Survival**: But realness was not just fun theater: on the streets outside the ballroom, for poor trans women of color like Venus Xtravaganza, failing to pass meant physical murder.
-- **Subversion vs. Re-inscription**: Connect Butler with bell hooks: when ball walkers imitate white wealth and luxury, are they subverting the system by showing anyone can perform it, or are they re-affirming that elite white wealth is the only thing that guarantees physical safety?
+## Slide $10$: Course Connection: Paris is Burning & "Realness"
+- **Quote**: Look at bell hooks' incisive critique on screen: at the drag balls, the white corporate executive is not mocked; he is worshipped as the supreme fantasy of power and safety.
+- **Ballroom**: In our syllabus film "Paris is Burning", Black and Latino queer and trans communities in $1980$s Harlem gathered in balls to compete in categories like "Executive Realness", "Town and Country", and "Military".
+- **Parody**: Butler points out that when a poor queer youth of color walks a runway and passes flawlessly as a Wall Street executive, it exposes the truth about power: the actual Wall Street executive is also just performing a costume with no natural original.
+- **Survival**: But realness was never just a fun game: on the streets outside the ballroom, for poor trans women of color like Venus Xtravaganza, achieving realness was the only shield against street harassment, police brutality, and murder.
+- **Ambivalence**: Connecting Butler with bell hooks reveals a deep contradiction: when ball participants compete to imitate white wealth and corporate prestige, are they subverting the system by showing anyone can perform it, or are they re-affirming that elite white wealth is the only thing that guarantees physical safety?
+- **Bridge**: This complex tension between academic theory and the lived realities of Harlem brings us to the hard critique: as influential as Butler's theory is, who was left behind in early queer theory?
 
 ---
 
-## Slide 11: Who Was Left Out: The Limits of Early Queer Theory
-- **Quote ("The struggle is not just about words")**: Look at the quote on screen: the struggle is not just an abstract debate over language; it is about having a body and a life that feels liveable.
-- **Transgender Embodiment**: Critics pointed out that Butler treated trans lives like an ironic deconstructive costume for academics. For trans people, transitioning is not a language game; it is a physical reality involving bodily dysphoria, healthcare access, and literal survival.
-- **Race and Street Violence**: Academic seminars in ivory towers romanticized ball culture as radical play, while ignoring the brutal reality that Black and Latina trans women were facing homelessness, poverty, and street violence.
-- **Asexual Erasure**: Early queer theory operated under the assumption that liberation meant celebrating erotic transgression, completely ignoring asexual, aromantic, and non-sexual queer lives.
-- **Global Borders**: "Queer" is an Anglo-American, English-language word; exporting it around the world risks overriding indigenous and non-Western gender systems under Western labels.
+## Slide $11$: Who Was Left Out: The Limits of Early Queer Theory
+- **Quote**: Look at the quote on screen: the struggle is not just an abstract academic debate over language; it is about having a body and a life that feels liveable.
+- **Transgender**: Transgender theorists like Jay Prosser pointed out that Butler treated trans lives like an ironic deconstructive costume for academics. For trans people, transitioning is not a linguistic game; it is a physical reality involving bodily dysphoria, hormone access, and medical survival.
+- **Race**: While tenured professors in elite universities were praising drag as radical subversion, Black and Latina trans women on the street were facing rampant homelessness, police violence, and premature death.
+- **Asexuality**: Early queer theory operated under the assumption that liberation meant celebrating erotic transgression, which completely erased asexual, aromantic, and non-sexual queer experiences from the movement.
+- **Borders**: Finally, "queer" is a specific English-language, Western concept. Exporting it across global borders risks overriding indigenous and non-Western gender systems under American academic categories.
+- **Bridge**: Keeping this full story in mind—from the trauma of the AIDS epidemic, to the linguistic machinery of performativity, to these vital critiques—I want to open our discussion to the class with three questions.
 
 ---
 
-## Slide 12: Three Class Discussion Questions
-- **1. Performativity in Daily Life**: Where in university life, sports, Greek life, or family expectations do you see gender enforced through disciplinary routine rather than personal choice?
-- **2. Limits of Resignification**: Can every slur be reclaimed and stripped of its trauma, or does the history of violence behind certain words leave a permanent wound?
-- **3. Realness & Exclusion**: In "Paris is Burning", contestants achieve realness by copying corporate and military power. Does achieving realness subvert dominant hierarchies, or does it risk treating elite wealth and cisnormativity as the only standard of survival?
+## Slide $12$: Three Class Discussion Questions
+- **Discipline**: Where in university life, Greek life, athletics, or family traditions do you experience gender enforced through compulsory disciplinary routine rather than free personal choice?
+- **Reclamation**: Can every injurious slur be reclaimed and stripped of its harm, or does the history of physical violence behind certain words leave an indelible wound that cannot be undone?
+- **Hierarchy**: In "Paris is Burning", ball contestants achieve realness by copying corporate, military, and wealthy white aesthetics. Does achieving realness subvert dominant hierarchies, or does it reinforce elite wealth and cisnormativity as the only standard of survival?
 
 ---
 
-## Slide 13: References (BibTeX)
+## Slide $13$: References (BibTeX)
 
 ```bibtex
 @incollection{butler1993critically,

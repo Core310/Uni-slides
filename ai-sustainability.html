@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Sustainability: Data Labeling & Labor Supply Chain | CS 5083</title>
+
+  <!-- Reveal.js Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+
+  <style>
+    :root {
+      --accent-color: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.35);
+      --card-bg: rgba(11, 16, 26, 0.88);
+      --card-border: rgba(56, 189, 248, 0.28);
+      --card-border-hover: rgba(56, 189, 248, 0.65);
+      --tag-bg: rgba(56, 189, 248, 0.12);
+      --tag-border: rgba(56, 189, 248, 0.3);
+      --sub-card-bg: rgba(15, 23, 42, 0.85);
+      --danger-color: #f87171;
+      --warning-color: #fbbf24;
+      --success-color: #34d399;
+    }
+
+    .reveal-viewport {
+      background: transparent !important;
+    }
+
+    .reveal .slides {
+      pointer-events: auto;
+    }
+
+    /* Clean slide card with guaranteed bottom clearance for scrolling */
+    .reveal .slides section {
+      text-align: left;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box !important;
+      padding: 35px 50px 180px 50px !important;
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .reveal .slides section::after {
+      content: "";
+      display: block;
+      height: 160px;
+      width: 100%;
+      clear: both;
+    }
+
+    .reveal .slides section > *:last-child {
+      margin-bottom: 100px !important;
+    }
+
+    /* Headings */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .reveal h1 {
+      font-size: 1.85em;
+      margin-bottom: 0.35em;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.25em;
+      font-weight: 800;
+    }
+
+    .reveal h2 {
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 0.35em;
+      font-weight: 700;
+    }
+
+    .reveal h3 {
+      font-size: 1.15em;
+      color: var(--accent-color);
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+
+    .reveal h4 {
+      font-size: 0.98em;
+      color: #7dd3fc;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+    }
+
+    .reveal p, .reveal li {
+      font-size: 0.88em;
+      line-height: 1.6;
+      color: #f1f5f9;
+      margin-bottom: 0.7em;
+    }
+
+    .reveal strong {
+      color: #38bdf8;
+    }
+
+    /* Badges & Tags */
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent-color);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .badge.highlight {
+      background: rgba(14, 165, 233, 0.25);
+      border-color: rgba(56, 189, 248, 0.5);
+      color: #e0f2fe;
+    }
+
+    .badge.danger {
+      background: rgba(239, 68, 68, 0.18);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--sub-card-bg);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 18px 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .card:hover {
+      border-color: var(--card-border-hover);
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.02em;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 6px;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .card li {
+      font-size: 0.84em;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+
+    /* Metric callout box */
+    .metric-callout {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      border-left: 5px solid #ef4444;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .metric-number {
+      font-size: 2.2em;
+      font-weight: 800;
+      color: #f87171;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.86em;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .metric-desc {
+      font-size: 0.82em;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* Audit comparison block */
+    .audit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .audit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .audit-box {
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.84em;
+      line-height: 1.5;
+    }
+
+    .audit-box.success {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-left: 4px solid var(--success-color);
+    }
+
+    .audit-box.failure {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-left: 4px solid var(--danger-color);
+    }
+
+    .audit-box.missing {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-left: 4px solid var(--warning-color);
+    }
+
+    .audit-box h5 {
+      font-size: 0.95em;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      color: #ffffff;
+    }
+
+    /* Fixed UI navigation overlays */
+    .speaker-hint {
+      position: fixed;
+      bottom: 12px;
+      left: 16px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      z-index: 100;
+      font-family: monospace;
+      pointer-events: none;
+    }
+
+    .slide-link {
+      position: fixed;
+      bottom: 12px;
+      right: 16px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      text-decoration: none;
+      z-index: 100;
+      font-family: monospace;
+      transition: color 0.2s ease;
+    }
+
+    .slide-link:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .btn-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--accent-color);
+      transition: all 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn-inline:hover {
+      background: rgba(56, 189, 248, 0.25);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="speaker-hint">Press 'S' for speaker notes | 'F' for fullscreen</div>
+  <a class="slide-link" href="https://somethingsomething.fyi/Uni-slides/ai-sustainability.html" target="_blank" rel="noopener">somethingsomething.fyi/Uni-slides</a>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 0: Title & Executive Overview -->
+      <section>
+        <div class="badge-bar">
+          <span class="badge highlight">CS 4083 / CS 5083 Ethical and Responsible AI</span>
+          <span class="badge">Week 9: AI Sustainability Cards</span>
+          <span class="badge">Collecting Data &amp; Labelling</span>
+        </div>
+
+        <h1>AI Sustainability: Data Labeling &amp; Labor Supply Chain</h1>
+        <h3>Cross-Border Pipeline: Singapore Corporate Capital to Bangsar South Annotation Delivery Hub</h3>
+        
+        <p style="margin-top: 14px; color: #cbd5e1;">
+          <strong>Author:</strong> Arika Khor &bull; <strong>Institution:</strong> University of Oklahoma &bull; <strong>Date:</strong> October 26, 2026<br>
+          <strong>Track:</strong> Collecting data (training, scraping, labor, etc) &mdash; <em>1. Arika Khor and labelling</em>
+        </p>
+
+        <div class="grid-3" style="margin-top: 24px;">
+          <div class="card">
+            <div class="card-title"><span>Slide 1 &bull; Physical Pin &amp; Flows</span></div>
+            <p style="font-size: 0.82em; color: #94a3b8; margin-bottom: 8px;">
+              Geographic coordinates, material inputs/outputs, capital anchors across Singapore and Kuala Lumpur, and local worker profiles.
+            </p>
+            <span class="badge">Coordinates: 3.1114° N, 101.6669° E</span>
+          </div>
+
+          <div class="card">
+            <div class="card-title"><span>Slide 2 &bull; Governance &amp; Layoffs</span></div>
+            <p style="font-size: 0.82em; color: #94a3b8; margin-bottom: 8px;">
+              Malaysian Employment Act 1955, CMA 1998, verified October 2024 mass layoff of 500+ workers, and NDA opacity.
+            </p>
+            <span class="badge danger">Layoff Metric: 500+ Workers</span>
+          </div>
+
+          <div class="card">
+            <div class="card-title"><span>Slide 3 &bull; GenAI Audit &amp; Sources</span></div>
+            <p style="font-size: 0.82em; color: #94a3b8; margin-bottom: 8px;">
+              Stress-testing commercial LLMs against empirical labor data, corporate PR hallucinations, and graduate literature grounding.
+            </p>
+            <span class="badge highlight">4 Graduate References</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; gap: 12px; align-items: center;">
+          <a class="btn-inline" href="Arika_Khor_AI_Sustainability_Cards.pdf" target="_blank">
+            &darr; Download PDF Presentation (3 Cards)
+          </a>
+          <a class="btn-inline" href="ai-sustainability.qmd" target="_blank">
+            Quarto Source (.qmd)
+          </a>
+        </div>
+
+        <aside class="notes">
+          <ul>
+            <li><strong>Welcome</strong>: Today we examine the material reality of generative AI and algorithmic recommendation systems by auditing their underlying human data supply chain.</li>
+            <li><strong>Topic &amp; Track</strong>: Under the AI Sustainability track for data collection and labeling, our investigation focuses on the cross-border pipeline between corporate headquarters in Singapore and frontline annotation delivery floors in Kuala Lumpur, Malaysia.</li>
+            <li><strong>Methodology</strong>: We synthesize geographic coordinates, corporate financing flows, statutory labor frameworks, verified mass layoffs, adversarial AI audits, and graduate academic literature.</li>
+            <li><strong>Navigation</strong>: Use spacebar or arrow keys to navigate through the 3 cards. Press 'S' at any time to open speaker notes.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Slide 1: Physical Pin, Lifecycle Flows, and Workforce Profile -->
+      <section>
+        <div class="badge-bar">
+          <span class="badge highlight">Card 1 / 3</span>
+          <span class="badge">Geography &amp; Flows</span>
+          <span class="badge">Physical Infrastructure</span>
+        </div>
+
+        <h2>Physical Pin, Lifecycle Flows, and Workforce Profile</h2>
+        <h3>Connecting Singapore Corporate Capital to Bangsar South Labeling Operations</h3>
+
+        <div class="grid-2">
+          <!-- Card A: Specific Pick & Geographic Pin -->
+          <div class="card">
+            <div class="card-title"><span>📍 Specific Pick &amp; Location Pin</span></div>
+            <ul>
+              <li><strong>Site:</strong> ByteDance &amp; TDCX Regional Data Delivery Center, The Horizon, Bangsar South, Kuala Lumpur, Malaysia (<strong>3.1114° N, 101.6669° E</strong>).</li>
+              <li><strong>Lifecycle Role:</strong> Primary Southeast Asian operational hub for raw video categorization, multimodal content labeling, and safety filter training for TikTok and ByteDance recommendation algorithms.</li>
+              <li><strong>Spatial Real Estate:</strong> High-density BPO office towers equipped with biometric badging, isolated server networks, and monitored floor desks.</li>
+            </ul>
+          </div>
+
+          <!-- Card B: Lifecycle Inputs & Outputs -->
+          <div class="card">
+            <div class="card-title"><span>🔄 Lifecycle Inputs &amp; Outputs</span></div>
+            <ul>
+              <li><strong>Material &amp; Data Inputs:</strong> Raw, uncurated short-form video and text streams scraped across ASEAN languages; continuous human visual and cognitive attention; desktop terminals, enterprise fiber infrastructure, and air conditioning.</li>
+              <li><strong>Digital Outputs:</strong> Verified safety classification labels, fine-tuned recommendation model parameters, and RLHF safety policy training sets.</li>
+              <li><strong>Human / Externalized Outputs:</strong> Acute occupational psychological trauma, mental exhaustion, and high annual employee turnover among annotators.</li>
+            </ul>
+          </div>
+
+          <!-- Card C: Ownership, Control & Financing -->
+          <div class="card">
+            <div class="card-title"><span>🏛️ Ownership, Control &amp; Financing</span></div>
+            <ul>
+              <li><strong>Corporate Parent Pin:</strong> ByteDance Global HQ at One Raffles Quay, Singapore (<strong>1.2818° N, 103.8526° E</strong>).</li>
+              <li><strong>BPO Intermediary Pin:</strong> TDCX Corporate HQ at ESR BizPark @ Chai Chee, Singapore (<strong>1.3236° N, 103.9238° E</strong>).</li>
+              <li><strong>Capital Sourcing:</strong> ByteDance corporate operating revenue, TikTok digital ad monetisation, and global venture capital funds.</li>
+              <li><strong>Contract Structure:</strong> Third-party BPO service agreements that legally insulate ByteDance while offloading direct employer liabilities to TDCX Malaysia.</li>
+            </ul>
+          </div>
+
+          <!-- Card D: Community & Workforce Profile -->
+          <div class="card">
+            <div class="card-title"><span>👥 Community &amp; Workforce Profile</span></div>
+            <ul>
+              <li><strong>Host Community:</strong> Bangsar South (formerly Kampung Kerinchi), an urban commercial BPO enclave in southwest Kuala Lumpur characterized by transit nodes and commercial high-rises.</li>
+              <li><strong>Workforce Demographics:</strong> Young adult professionals (aged 21&ndash;35) with native multilingual proficiency across Malay, Indonesian, Tagalog, and English.</li>
+              <li><strong>Labor Conditions:</strong> Workers earn local BPO salaries of approximately <strong>$600 to $900 USD/month</strong> under automated quota surveillance, reviewing content at rates exceeding hundreds of tickets per shift.</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="notes">
+          <ul>
+            <li><strong>Concrete Grounding</strong>: AI discourse frequently characterizes datasets as weightless cloud artifacts. In reality, data annotation requires physical floor space, air conditioning, desktop terminals, and intensive human labor.</li>
+            <li><strong>Cross-Border Geography</strong>: Singapore serves as the regional corporate capital node. ByteDance manages algorithmic policy from One Raffles Quay, and TDCX runs contracting out of ESR BizPark @ Chai Chee. Because Singapore's median income exceeds $5,000 SGD/month, physical data labeling is financially unfeasible there.</li>
+            <li><strong>Extraction Node</strong>: Consequently, the labor is outsourced across the border to Bangsar South, Kuala Lumpur, where multilingual workers earn $600 to $900 USD a month under intense 15-second per review quotas.</li>
+            <li><strong>Externalized Cost</strong>: The digital outputs feed directly into TikTok's recommendation models, while the negative output&mdash;occupational trauma from viewing violent and graphic content&mdash;is absorbed entirely by the local Malaysian workforce.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Slide 2: Governance, Empirical Metrics, and Supply Chain Opacity -->
+      <section>
+        <div class="badge-bar">
+          <span class="badge highlight">Card 2 / 3</span>
+          <span class="badge danger">Empirical Layoff Metric</span>
+          <span class="badge">Governance &amp; Opacity</span>
+        </div>
+
+        <h2>Governance, Empirical Metrics, and Supply Chain Opacity</h2>
+        <h3>Labor Laws, Automation Substitution, and Corporate Secrecy</h3>
+
+        <div class="metric-callout">
+          <div class="metric-number">500+ Workers Terminated</div>
+          <div class="metric-label">October 2024 Mass Layoff at ByteDance Bangsar South Operations</div>
+          <div class="metric-desc">
+            Journalism (Reuters investigative reporting, October 11, 2024, corroborated by Channel NewsAsia) and verified through official statements from the Malaysian Ministry of Human Resources. Cross-referenced with ByteDance's global transparency disclosures reporting that over <strong>80% of violating content is now removed automatically</strong> by machine learning systems trained on these workers' prior annotations.
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <!-- Card A: Governing Laws & Regulations -->
+          <div class="card">
+            <div class="card-title"><span>⚖️ Governing Laws and Regulations</span></div>
+            <ul>
+              <li><strong>Employment Regulation:</strong> Governed under the Malaysian Employment Act 1955, regulating basic contract terms, standard operating hours, and statutory termination notice periods.</li>
+              <li><strong>Content Regulation:</strong> Governed under the Malaysian Communications and Multimedia Act 1998 (CMA Sections 211 and 233), criminalizing the online transmission of offensive, indecent, or menacing content.</li>
+              <li><strong>Regulatory Gap:</strong> Existing labor statutes mandate physical workplace safety but contain zero statutory standards for psychological injury, algorithmic quota pacing, or vicarious trauma compensation.</li>
+            </ul>
+          </div>
+
+          <!-- Card B: Supply Chain Opacity & Missing Data -->
+          <div class="card">
+            <div class="card-title"><span>🔒 Supply Chain Opacity and Missing Data</span></div>
+            <ul>
+              <li><strong>Non-Disclosure Agreements:</strong> Strict NDAs prohibit workers from naming clients, discussing algorithmic annotation manuals, or disclosing daily review quotas.</li>
+              <li><strong>Corporate Financial Secrecy:</strong> Parent corporations keep profit margins opaque, shielding the financial spread between what ByteDance and TDCX bill in Singapore versus the wages paid in Kuala Lumpur.</li>
+              <li><strong>Omitted Perspectives:</strong> Long-term psychiatric trauma and worker mental health outcomes are withheld from public reporting and absent from corporate CSR transparency reports.</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="notes">
+          <ul>
+            <li><strong>Governance Mismatch</strong>: On Slide 2, we evaluate legal governance and systemic supply chain opacity. While the Malaysian Employment Act 1955 covers standard contract terms, it contains no statutory safeguards for digital cognitive labor or psychological harm.</li>
+            <li><strong>The 500-Worker Layoff Metric</strong>: In October 2024, Reuters and Channel NewsAsia documented that ByteDance terminated over 500 content moderators in Kuala Lumpur in a single restructuring wave, confirmed by the Malaysian Human Resources Ministry.</li>
+            <li><strong>The Disposable Labor Paradox</strong>: This reveals the core paradox of AI sustainability: human annotators were hired to train automated moderation models; once ByteDance reached an 80% automated takedown rate, the human workforce was discarded to reduce operational expenditure.</li>
+            <li><strong>NDAs as Concealment</strong>: Strict non-disclosure agreements prevent workers from speaking publicly, masking the true human toll of training commercial AI systems.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Slide 3: Generative AI Comparative Audit & Graduate References -->
+      <section>
+        <div class="badge-bar">
+          <span class="badge highlight">Card 3 / 3</span>
+          <span class="badge">Adversarial LLM Audit</span>
+          <span class="badge highlight">Graduate Literature (CS 5083)</span>
+        </div>
+
+        <h2>Generative AI Comparative Audit &amp; Academic Grounding</h2>
+        <h3>Stress-Testing Commercial Models Against Empirical Supply Chain Reality</h3>
+
+        <div class="card" style="margin-bottom: 16px;">
+          <div class="card-title"><span>🤖 Generative AI Comparative Audit</span></div>
+          <p style="font-size: 0.84em; margin-bottom: 8px;">
+            <strong>Prompt Tested:</strong> <em>"Analyze the labor conditions, supply chain role, and corporate structure of ByteDance's data labeling operations in Southeast Asia."</em>
+          </p>
+
+          <div class="audit-grid">
+            <div class="audit-box success">
+              <h5>✓ What It Got Right</h5>
+              <p>Accurately identified that ByteDance uses outsourced labor in Malaysia and the Philippines for multilingual video labeling, and recognized Singapore as the regional corporate management center.</p>
+            </div>
+
+            <div class="audit-box failure">
+              <h5>✗ What It Hallucinated / Smoothed Over</h5>
+              <p>Relied heavily on corporate PR claims, asserting that workers receive "competitive tech salaries and comprehensive psychological care," while ignoring high daily quotas where workers evaluate hundreds of videos per shift with under 15 seconds per review.</p>
+            </div>
+          </div>
+
+          <div class="audit-box missing" style="margin-top: 12px;">
+            <h5>⚠️ What It Missed</h5>
+            <p>Completely omitted the October 2024 mass layoffs in Malaysia, missing the reality that human data annotators were discarded once their training annotations made automated AI moderation viable. It also missed the cross-border capital extraction pipeline between Singapore and Malaysia.</p>
+          </div>
+        </div>
+
+        <!-- Graduate Academic References -->
+        <div class="card">
+          <div class="card-title"><span>📚 Graduate Academic References (CS 5083 Standard)</span></div>
+          <ul style="font-size: 0.82em; line-height: 1.55;">
+            <li><strong>Crawford, Kate (2021):</strong> <em>Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence.</em> Yale University Press. (Chapter 2: "Labor", detailing how artificial intelligence depends on exploited, hidden human labor pipelines).</li>
+            <li><strong>Roberts, Sarah T. (2019):</strong> <em>Behind the Screen: Content Moderation in the Shadows of Social Media.</em> Yale University Press. (Foundational ethnographic text on third-party commercial content moderation and psychological injury).</li>
+            <li><strong>Latiff, Rozanna, and Danial Azhar (2024):</strong> "ByteDance lays off hundreds of staff in Malaysia as it shifts toward AI moderation." <em>Reuters</em>, October 11, 2024. (Corroborated by Channel NewsAsia and Malaysian Ministry of Human Resources).</li>
+            <li><strong>TDCX Inc. (2023):</strong> <em>Form 20-F Annual Report.</em> US Securities and Exchange Commission. (Disclosing corporate operational geography, risk factors, and reliance on primary social media platform clients).</li>
+          </ul>
+        </div>
+
+        <aside class="notes">
+          <ul>
+            <li><strong>Adversarial Audit</strong>: On Slide 3, we compare commercial Generative AI output against our investigated facts. When queried about ByteDance's Southeast Asian labor footprint, commercial LLMs default to sanitized corporate public relations talking points.</li>
+            <li><strong>Hallucinations of Benevolence</strong>: The model hallucinated that annotators enjoy generous wellness packages and competitive wages, entirely omitting the high-pressure 15-second review queues and daily performance surveillance.</li>
+            <li><strong>The Big Blindspot</strong>: Crucially, commercial GenAI had zero awareness of the October 2024 mass layoffs in Malaysia and could not explain the cross-border wage arbitrage connecting Singapore and Kuala Lumpur.</li>
+            <li><strong>Scholarly Grounding</strong>: We ground our findings in Kate Crawford's 'Atlas of AI' and Sarah T. Roberts' 'Behind the Screen', demonstrating that modern artificial intelligence is neither artificial nor sustainable without an invisible, disposable human workforce.</li>
+          </ul>
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+
+  <script>
+    Reveal.initialize({
+      width: 1400,
+      height: 850,
+      margin: 0.08,
+      minScale: 0.2,
+      maxScale: 1.0,
+
+      // Parallax background image (City pixel art, matching Uni-slides standard)
+      parallaxBackgroundImage: 'city-parallax.png',
+      parallaxBackgroundSize: '2304px 1296px',
+      parallaxBackgroundHorizontal: 200,
+      parallaxBackgroundVertical: 50,
+
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      history: true,
+
+      plugins: [ RevealNotes ]
+    });
+
+    // BroadcastChannel sync for speaker notes window
+    (function() {
+      var isReceiver = /receiver/i.test(window.location.search);
+      var isCurrentSlidePreview = isReceiver && /postMessageEvents=true/i.test(window.location.search);
+      var syncChannel = typeof BroadcastChannel !== 'undefined' ? new BroadcastChannel('uni-slides-ai-sustainability-notes') : null;
+      var applyingRemoteState = false;
+
+      function getCurrentNotesHTML() {
+        var slide = Reveal.getCurrentSlide();
+        if (!slide) return '';
+        var notesEl = slide.querySelector('aside.notes');
+        return notesEl ? notesEl.innerHTML : '';
+      }
+
+      function pushNotesToSpeakerWindow() {
+        var state = Reveal.getState();
+        var notesHTML = getCurrentNotesHTML();
+        var payload = JSON.stringify({
+          namespace: 'reveal-notes',
+          type: 'state',
+          notes: notesHTML,
+          markdown: false,
+          whitespace: 'normal',
+          state: state
+        });
+
+        if (isCurrentSlidePreview && window.parent && window.parent !== window.self) {
+          try {
+            var parentDoc = window.parent.document;
+            var notesContainer = parentDoc.querySelector('.speaker-controls-notes');
+            var notesValue = parentDoc.querySelector('.speaker-controls-notes .value');
+            if (notesContainer && notesValue) {
+              if (notesHTML) {
+                notesContainer.classList.remove('hidden');
+                notesValue.style.whiteSpace = 'normal';
+                notesValue.innerHTML = notesHTML;
+              } else {
+                notesContainer.classList.add('hidden');
+              }
+            }
+          } catch (err) {}
+          window.parent.postMessage(payload, '*');
+        }
+      }
+
+      Reveal.on('ready', function() {
+        pushNotesToSpeakerWindow();
+      });
+
+      Reveal.on('slidechanged', function() {
+        pushNotesToSpeakerWindow();
+        if (syncChannel && !applyingRemoteState) {
+          if (!isReceiver) {
+            syncChannel.postMessage({
+              source: 'main',
+              state: Reveal.getState(),
+              notes: getCurrentNotesHTML()
+            });
+          } else if (isCurrentSlidePreview) {
+            syncChannel.postMessage({
+              source: 'preview',
+              state: Reveal.getState()
+            });
+          }
+        }
+      });
+
+      if (syncChannel) {
+        syncChannel.addEventListener('message', function(event) {
+          var data = event.data;
+          if (!data || !data.state) return;
+
+          if (isCurrentSlidePreview && data.source === 'main') {
+            applyingRemoteState = true;
+            Reveal.setState(data.state);
+            applyingRemoteState = false;
+            pushNotesToSpeakerWindow();
+          } else if (!isReceiver && data.source === 'preview') {
+            applyingRemoteState = true;
+            Reveal.setState(data.state);
+            applyingRemoteState = false;
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

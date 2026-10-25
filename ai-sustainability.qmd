@@ -1,0 +1,104 @@
+---
+title: "AI Sustainability: Data Labeling & Labor Supply Chain"
+subtitle: "Cross-Border Annotation Pipeline: Singapore Corporate HQ to Bangsar South, Kuala Lumpur"
+author: "Arika Khor"
+institute: "CS 4083 / CS 5083 Ethical and Responsible AI | University of Oklahoma"
+date: "October 26, 2026"
+format:
+  revealjs:
+    theme: black
+    slide-number: true
+    width: 1400
+    height: 850
+    margin: 0.08
+    center: false
+    parallax-background-image: "city-parallax.png"
+    parallax-background-size: "2304px 1296px"
+    parallax-background-horizontal: 200
+    parallax-background-vertical: 50
+---
+
+# AI Sustainability: Data Labeling & Labor Supply Chain
+
+**Course:** CS 4083 / CS 5083 Ethical and Responsible AI  
+**Author:** Arika Khor | University of Oklahoma | Fall 2026  
+**Track:** Collecting data (training, scraping, labor, etc) — 1. Arika Khor and labelling  
+**Deliverable:** 3-Slide Sustainability Deck (Physical Pin, Governance & Layoffs, GenAI Audit & Graduate References)
+
+::: {.notes}
+Welcome. Today we examine the material reality of generative AI and algorithmic recommendation systems by tracing their underlying data supply chain. Specifically, we audit the cross-border pipeline connecting regional corporate headquarters in Singapore to the frontline content labeling and moderation delivery center at Bangsar South in Kuala Lumpur, Malaysia.
+:::
+
+---
+
+# Card 1: Physical Pin, Lifecycle Flows, and Workforce Profile
+
+### Specific Pick & Geographic Pin
+- **Site:** ByteDance & TDCX Regional Data Delivery Center, The Horizon, Bangsar South, Kuala Lumpur, Malaysia (3.1114° N, 101.6669° E).
+- **Lifecycle Role:** Primary Southeast Asian operational hub for raw video categorization, content labeling, and safety filter training for TikTok and ByteDance algorithms.
+
+### Lifecycle Inputs & Outputs
+- **Inputs:** Raw uncurated short-form video and text streams scraped across ASEAN; continuous human visual and cognitive attention; desktop terminals and enterprise fiber networks.
+- **Outputs:** Verified safety training labels, RLHF policy training datasets, fine-tuned recommendation model parameters. Negative output: acute occupational psychological trauma among annotators.
+
+### Ownership, Control, & Financing
+- **Owner / Capital Pin:** ByteDance Global HQ at One Raffles Quay, Singapore (1.2818° N, 103.8526° E) and TDCX Corporate HQ at ESR BizPark @ Chai Chee, Singapore (1.3236° N, 103.9238° E).
+- **Financing:** Funded via ByteDance corporate revenue, TikTok digital ad monetisation, and global venture capital pools.
+
+### Community & Workforce Profile
+- **Host Community:** Bangsar South (Kerinchi), a redeveloped commercial BPO enclave in southwest Kuala Lumpur.
+- **Workforce:** Young adult professionals (aged 21-35) with multilingual fluency across Malay, Indonesian, Tagalog, and English. Workers earn local BPO salaries of approximately $600 to $900 USD/month under automated quota surveillance.
+
+::: {.notes}
+On Slide 1, we ground our sustainability audit in a concrete geographic pin. AI discourse often speaks of datasets as ethereal abstractions floating in the cloud. In reality, data annotation requires physical floor space, air conditioning, desktop terminals, and shift workers. 
+
+Singapore serves as the corporate capital anchor: ByteDance operates out of One Raffles Quay, and TDCX manages contracts from ESR BizPark in Chai Chee. But Singapore's high median income means physical data labeling is unfeasible there. Consequently, the labor is outsourced across the border to Bangsar South, Kuala Lumpur, where multilingual workers earn $600 to $900 a month reviewing graphic and uncurated short-form video streams under ruthless 15-second per review quotas.
+:::
+
+---
+
+# Card 2: Governance, Empirical Impact Metric, and Supply Chain Opacity
+
+### Governing Laws & Regulations
+- **Labor Law:** Malaysian Employment Act 1955, regulating basic contract terms, standard operating hours, and statutory termination notice periods.
+- **Content Regulation:** Malaysian Communications and Multimedia Act 1998 (CMA Sections 211 & 233), criminalizing the transmission of offensive, indecent, or menacing content online.
+
+### Verified Quantitative Impact Metric
+- **Metric:** Over 500 workers were terminated in a single restructuring wave in October 2024 at ByteDance's Bangsar South hub as operations shifted to automated AI safety models.
+- **Source Classification:** Journalism (Reuters investigative reporting, October 11, 2024, corroborated by Channel NewsAsia), verified through official statements from the Malaysian Ministry of Human Resources.
+- **Empirical Verification:** Cross-referenced with ByteDance's global transparency disclosures, reporting that over 80% of violating content is now removed automatically by machine learning systems trained on these workers' prior annotations.
+
+### Supply Chain Opacity & Missing Data
+- **Non-Disclosure Agreements:** Strict NDAs prohibit workers from naming clients, discussing algorithmic annotation manuals, or disclosing daily review quotas.
+- **Corporate Financial Secrecy:** Parent corporations keep profit margins opaque, shielding the financial spread between what ByteDance and TDCX bill in Singapore versus the wages paid in Kuala Lumpur.
+- **Omitted Perspectives:** Long-term psychiatric trauma and worker mental health outcomes are withheld from public reporting.
+
+::: {.notes}
+Moving to Slide 2, we evaluate governance structures, verified empirical metrics, and systemic opacity. In October 2024, Reuters and Channel NewsAsia reported that ByteDance terminated over 500 content moderators in Kuala Lumpur in a single restructuring round. 
+
+This presents a profound structural paradox in AI sustainability: the human annotators were utilized to train and calibrate automated safety models; once ByteDance reached an 80% automated takedown rate via machine learning, the human foundation was unceremoniously discarded to cut overhead. 
+
+Meanwhile, strict NDAs and BPO intermediary structures legally prevent workers from organizing, speaking to journalists, or accessing transparent mental health restitution for vicarious trauma.
+:::
+
+---
+
+# Card 3: Generative AI Comparative Audit & References
+
+### Generative AI Comparative Audit
+- **Prompt Tested:** "Analyze the labor conditions, supply chain role, and corporate structure of ByteDance's data labeling operations in Southeast Asia."
+- **What It Got Right:** Accurately identified that ByteDance uses outsourced labor in Malaysia and the Philippines for multilingual video labeling, and recognized Singapore as the regional corporate management center.
+- **What It Hallucinated / Smoothed Over:** Relied heavily on corporate PR claims, asserting that workers receive "competitive tech salaries and comprehensive psychological care," while ignoring high daily quotas where workers evaluate hundreds of videos per shift with under 15 seconds per review.
+- **What It Missed:** Completely omitted the October 2024 mass layoffs in Malaysia, missing the reality that human data annotators were discarded once their training annotations made automated AI moderation viable. It also missed the cross-border capital extraction pipeline between Singapore and Malaysia.
+
+### Graduate Academic References (CS 5083 Standard)
+- Crawford, Kate. *Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence.* Yale University Press, 2021. (Chapter 2: Labor).
+- Roberts, Sarah T. *Behind the Screen: Content Moderation in the Shadows of Social Media.* Yale University Press, 2019.
+- Latiff, Rozanna, and Danial Azhar. "ByteDance lays off hundreds of staff in Malaysia as it shifts toward AI moderation." *Reuters*, October 11, 2024.
+- TDCX Inc. *Form 20-F Annual Report.* US Securities and Exchange Commission, 2023.
+
+::: {.notes}
+On Slide 3, we conduct our comparative audit against commercial Generative AI and ground the analysis in graduate scholarship. When prompted about ByteDance's Southeast Asian labeling footprint, commercial GenAI produced sanitized corporate public relations copy: claiming workers enjoy generous wellness packages and competitive wages. 
+
+It completely hallucinated worker autonomy, failed to cite the October 2024 layoffs, and omitted the harsh psychological reality of high-throughput review queues. As Sarah Roberts documents in 'Behind the Screen' and Kate Crawford demonstrates in 'Atlas of AI', data work is treated as disposable infrastructure rather than dignified knowledge work. Tracing these supply chains makes visible the planetary human labor that makes AI systems appear intelligent.
+:::

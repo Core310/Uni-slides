@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Title | Course ID</title>
+
+  <!-- Reveal.js Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+
+  <style>
+    :root {
+      --accent-color: #38bdf8;
+      --card-bg: rgba(11, 16, 26, 0.88);
+      --card-border: rgba(56, 189, 248, 0.28);
+      --sub-card-bg: rgba(15, 23, 42, 0.85);
+      --tag-bg: rgba(56, 189, 248, 0.12);
+      --tag-border: rgba(56, 189, 248, 0.3);
+    }
+
+    .reveal-viewport {
+      background: transparent !important;
+    }
+
+    .reveal .slides {
+      pointer-events: auto;
+    }
+
+    .reveal .slides section {
+      text-align: left;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box !important;
+      padding: 35px 50px 180px 50px !important;
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .reveal .slides section::after {
+      content: "";
+      display: block;
+      height: 160px;
+      width: 100%;
+      clear: both;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3 {
+      text-transform: none;
+      letter-spacing: -0.01em;
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .reveal h1 {
+      font-size: 1.85em;
+      margin-bottom: 0.35em;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.25em;
+      font-weight: 800;
+    }
+
+    .reveal h2 {
+      font-size: 1.5em;
+      color: #ffffff;
+      margin-bottom: 0.35em;
+      font-weight: 700;
+    }
+
+    .reveal h3 {
+      font-size: 1.15em;
+      color: var(--accent-color);
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+
+    .reveal p, .reveal li {
+      font-size: 0.88em;
+      line-height: 1.6;
+      color: #f1f5f9;
+      margin-bottom: 0.7em;
+    }
+
+    .reveal strong {
+      color: #38bdf8;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: var(--sub-card-bg);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 10px;
+      padding: 18px 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-title {
+      font-size: 1.02em;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 6px;
+    }
+
+    .speaker-hint {
+      position: fixed;
+      bottom: 12px;
+      left: 16px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      z-index: 100;
+      font-family: monospace;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="speaker-hint">Press 'S' for speaker notes | 'F' for fullscreen</div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 0: Title -->
+      <section>
+        <h1>Presentation Title</h1>
+        <h3>Presentation Subtitle &amp; Scope</h3>
+        <p>
+          <strong>Author:</strong> Arika Khor &bull; <strong>Date:</strong> Fall 2026<br>
+          <strong>Course:</strong> University of Oklahoma Coursework
+        </p>
+        <aside class="notes">
+          <ul>
+            <li><strong>Introduction</strong>: Speaker notes narrative here.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Slide 1: Content Grid -->
+      <section>
+        <h2>Slide 1: Technical Content</h2>
+        <h3>Key Architecture &amp; Mechanics</h3>
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title">Left Topic Card</div>
+            <ul>
+              <li><strong>Mechanism:</strong> Technical detail here.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title">Right Topic Card</div>
+            <ul>
+              <li><strong>Evaluation:</strong> Technical detail here.</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          <ul>
+            <li><strong>Key Finding</strong>: Speaker notes for slide 1.</li>
+          </ul>
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+
+  <script>
+    Reveal.initialize({
+      width: 1400,
+      height: 850,
+      margin: 0.08,
+      minScale: 0.2,
+      maxScale: 1.0,
+      parallaxBackgroundImage: '../../city-parallax.png',
+      parallaxBackgroundSize: '2304px 1296px',
+      parallaxBackgroundHorizontal: 200,
+      parallaxBackgroundVertical: 50,
+      center: false,
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      history: true,
+      plugins: [ RevealNotes ]
+    });
+
+    (function() {
+      var isReceiver = /receiver/i.test(window.location.search);
+      var isCurrentSlidePreview = isReceiver && /postMessageEvents=true/i.test(window.location.search);
+      var syncChannel = typeof BroadcastChannel !== 'undefined' ? new BroadcastChannel('uni-slides-template-notes') : null;
+      var applyingRemoteState = false;
+
+      function getCurrentNotesHTML() {
+        var slide = Reveal.getCurrentSlide();
+        if (!slide) return '';
+        var notesEl = slide.querySelector('aside.notes');
+        return notesEl ? notesEl.innerHTML : '';
+      }
+
+      function pushNotesToSpeakerWindow() {
+        var state = Reveal.getState();
+        var notesHTML = getCurrentNotesHTML();
+        var payload = JSON.stringify({
+          namespace: 'reveal-notes',
+          type: 'state',
+          notes: notesHTML,
+          markdown: false,
+          whitespace: 'normal',
+          state: state
+        });
+
+        if (isCurrentSlidePreview && window.parent && window.parent !== window.self) {
+          try {
+            var parentDoc = window.parent.document;
+            var notesContainer = parentDoc.querySelector('.speaker-controls-notes');
+            var notesValue = parentDoc.querySelector('.speaker-controls-notes .value');
+            if (notesContainer && notesValue) {
+              if (notesHTML) {
+                notesContainer.classList.remove('hidden');
+                notesValue.style.whiteSpace = 'normal';
+                notesValue.innerHTML = notesHTML;
+              } else {
+                notesContainer.classList.add('hidden');
+              }
+            }
+          } catch (err) {}
+          window.parent.postMessage(payload, '*');
+        }
+      }
+
+      Reveal.on('ready', function() { pushNotesToSpeakerWindow(); });
+      Reveal.on('slidechanged', function() {
+        pushNotesToSpeakerWindow();
+        if (syncChannel && !applyingRemoteState) {
+          if (!isReceiver) {
+            syncChannel.postMessage({
+              source: 'main',
+              state: Reveal.getState(),
+              notes: getCurrentNotesHTML()
+            });
+          } else if (isCurrentSlidePreview) {
+            syncChannel.postMessage({
+              source: 'preview',
+              state: Reveal.getState()
+            });
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
